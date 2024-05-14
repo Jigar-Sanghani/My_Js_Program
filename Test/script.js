@@ -1,9 +1,6 @@
 let student = [];
 
-let total = 0;
-
 const uiMaker = () => {
-    total ++;
     document.getElementById("tbody").innerHTML = "";
     student.map((ele,index) => {
         tr = document.createElement("tr");
@@ -35,7 +32,7 @@ const uiMaker = () => {
         document.getElementById("tbody").append(tr);
         
     });
-    document.getElementById("total").innerHTML= `Amployee Total ${total}`
+    document.getElementById("total").innerHTML= `Amployee Total ${student.length}`
 }
 const handlcompany = (e) => {
     e.preventDefault()
