@@ -1,4 +1,5 @@
 let student = [];
+let total_Salary =0;
 
 const uiMaker = () => {
     document.getElementById("tbody").innerHTML = "";
@@ -19,7 +20,7 @@ const uiMaker = () => {
         role = document.createElement("td");
         let deleteButton = document.createElement("button");
         deleteButton.innerHTML = "Delete";
-        deleteButton.addEventListener("click", () => handleline(index));
+        deleteButton.addEventListener("click", () => handleline(index,ele.salary));
         let td4 = document.createElement("td");
         td4.append(deleteButton);
         if(ele.experience > 5){
@@ -32,7 +33,7 @@ const uiMaker = () => {
         document.getElementById("tbody").append(tr);
         
     });
-    document.getElementById("total").innerHTML= `Amployee Total ${student.length}`
+    document.getElementById("total").innerHTML= `Amployee Total ${student.length} Total Salary : ${total_Salary}`
 }
 const handlcompany = (e) => {
     e.preventDefault()
@@ -40,15 +41,19 @@ const handlcompany = (e) => {
         name: document.getElementById("name").value,
         job: document.getElementById("job").value,
         company: document.getElementById("department").value,
-        salary: document.getElementById("salary").value,
+        salary: Number(document.getElementById("salary").value),
         experience: document.getElementById("experience").value,
         email: document.getElementById("email").value,
     }
+
+    total_Salary+=data.salary;
+
     student.push(data);
     uiMaker();
 }
-const handleline = (index) => {
+const handleline = (index,salary) => {
     student.splice(index, 1);
+    total_Salary-=salary;
     uiMaker();
 }
 
@@ -56,6 +61,8 @@ const handleline = (index) => {
 const deletall = () =>{
     document.getElementById("tbody").innerHTML = ""
     student = [];
+    total_Salary=0;
+    uiMaker()
 }
 
 document.getElementById("fire").addEventListener("click",deletall)
