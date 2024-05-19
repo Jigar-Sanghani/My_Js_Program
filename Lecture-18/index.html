@@ -6,32 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            transition: all 0.5s;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #eaa891;
+        }
+        .formatType {
+            font-size: 27px;
+            font-weight: 600;
+            margin: 5%;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            text-align: center;
+            flex-direction: column;
         }
 
-        #counter {
-            font-size: 3em;
+        .date {
+            font-size: 25px;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 3px;
         }
 
-        button {
-            font-size: 1em;
-            padding: 10px 20px;
-            margin: 0 10px;
-            cursor: pointer;
+        .time {
+            font-size: 62px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+    
+        .time span:not(:last-child) {
+            position: relative;
+            margin: 0 6px;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 3px;
+        }
+
+        .time span:last-child {
+            background-color: #e3da2e;
+            font-size: 27px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 16px;
+            padding: 0 5px;
+            border-radius: 3px;
+        }
+
+        .menu-item {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+       
     </style>
 </head>
 
 <body>
-    <div id="counter">0</div>
-    <button onclick="increment()">+</button>
-    <button onclick="decrement()">-</button>
+    <div class="formatType">
+        <span class="menu-item">
+            <div class="format-switch-btn" data-format="12"></div>
+        </span>
+
+    </div>
+    <div class="datetime">
+
+        <div class="time">
+            <span id="hour"></span>
+            <span id="minutes"></span>
+            <span id="seconds"></span>
+            <span id="dayType"></span>
+        </div>
+
+        <div class="date">
+            <span id="dayName"></span>
+            <span id="date"></span>
+            <span id="month"></span>
+            <span id="year"></span>
+        </div>
+    </div>
 </body>
 <script src="./script.js"></script>
 
