@@ -32,7 +32,7 @@ const uimaker = () => {
 
         let btndiv = document.createElement("div");
         btndiv.append(buy_value, delet_value);
-        btndiv.setAttribute("class", "btnDiv");
+        btndiv.setAttribute("class", "btndiv");
 
         let div = document.createElement("div");
         div.append(imgdiv, name_value, price_value, btndiv);
