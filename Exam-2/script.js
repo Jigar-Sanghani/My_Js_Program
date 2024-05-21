@@ -49,11 +49,11 @@ const buy_warning = () => {
 };
 
 const Delete_warning = () => {
-    alert("Product is Deleted !! ");
+    alert("You Can Wan`t This Product Has Delete !! ");
 };
 
 const Delete = (index) => {
-    Data.splice(index, 1);
+    products.splice(index, 1);
     Delete_warning();
     uimaker();
 };
