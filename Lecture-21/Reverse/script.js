@@ -5,7 +5,7 @@ let sec = 59
 let id = setInterval(() => {
     console.log(`${hour} : ${min} : ${sec}`);
     sec = sec - 1;
-
+    document.getElementById("print").innerHTML = `${hour} : ${min} : ${sec}`;
     if (sec == 0) {
         min = min - 1;
         sec = 59;
@@ -19,6 +19,8 @@ let id = setInterval(() => {
         clearInterval(id);
     }
 }, 1000)
+
+console.log(id);
 
 let div = document.createElement('h1')
 div.append(id)
