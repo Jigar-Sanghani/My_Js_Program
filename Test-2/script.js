@@ -169,6 +169,8 @@ const check = (index, selectoption, btn) => {
 
 const handleproducts = (e) => {
     e.preventDefault();
+    
+    question_array=[];
     let data = {
         question: document.getElementById("qs").value,
         option1: document.getElementById("op1").value,
