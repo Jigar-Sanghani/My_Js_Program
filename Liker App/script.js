@@ -27,7 +27,6 @@ const handleShare = () =>{
 countSave = sessionStorage.getItem("countSave") || 0;
 const handleSave = () =>{
     countSave++;
-    alert(countSave+" Times You Saved This Post")
     sessionStorage.setItem("countSave", countSave)
 }
 
