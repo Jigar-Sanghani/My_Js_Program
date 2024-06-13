@@ -24,7 +24,7 @@ const handleData = (e) => {
         else {
             alert("Log-in Successfully !! " + user.email);
             document.getElementById("navbar").innerHTML = navbar()
-            window.location.href = "/Project/index.html"
+            window.location.href = "/Project/"
             localStorage.setItem("isLogin", true)
         }
     }

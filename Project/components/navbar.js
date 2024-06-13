@@ -1,5 +1,5 @@
 
-const navbar = (login="Log-In",signup="Sign-Up") => {
+const navbar = (login="login",signup="signup") => {
     return `    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="/Project/index.html">Product</a>

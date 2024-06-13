@@ -7,14 +7,16 @@ import getvalue from "../components/getvalue.js";
 const handleData = (e) => {
     e.preventDefault();
     let user = {
-        username: getvalue("username"),
+        username: getvalue("name"),
         email: getvalue("email"),
+        image: getvalue("image"),
         password: getvalue("password")
     }
 
-    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem("User-Data", JSON.stringify(user));
     localStorage.setItem("isLogin", true)
-    window.location.href = "/Project/index.html"
+    window.location.href = "/Project/"
+    alert("Sign-Up Successfully !!")
 
 }
 

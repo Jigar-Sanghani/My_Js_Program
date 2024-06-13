@@ -1,5 +1,5 @@
 
 const getvalue = (id) => {
-    return document.getElementById(id) .value
+    return document.getElementById(id).value
 }
 export default getvalue
