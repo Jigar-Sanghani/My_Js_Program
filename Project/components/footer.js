@@ -9,8 +9,8 @@ const footer = ()=>{
                         </div>
                         <div class="col-md-6">
                             <h3>Contact Us</h3>
-                            <p>Email: example@example.com</p>
-                            <p>Phone: 123-456-7890</p>
+                            <p>Email: jigarsanghani34@gmail.com</p>
+                            <p>Phone: 9998887772</p>
                         </div>
                     </div>
                 </div>
