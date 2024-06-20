@@ -14,6 +14,32 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+
+    <style>
+        #navbar {
+            margin-bottom: 02%;
+        }
+
+        #footer {
+            margin-top: 02%;
+        }
+
+        #productList {
+            margin-top: 02%;
+            margin-bottom: 02%;
+            display: grid;
+            text-align: center;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        #filters {
+            display: flex;
+            justify-content: center;
+            div{
+                margin: 01%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -25,11 +51,11 @@
             <div id="navbar">
             </div>
             <div id="filters">
-                <div class="btn btn-info" id="LTH">LTH</div>
-                <div class="btn btn-info" id="HTL">HTL</div>
-                <div class="btn btn-info" id="men">men</div>
-                <div class="btn btn-info" id="women">women</div>
-                <div class="btn btn-info" id="kids">kids</div>
+                <div class="btn btn-primary" id="LTH">LTH</div>
+                <div class="btn btn-primary" id="HTL">HTL</div>
+                <div class="btn btn-primary" id="men">Men</div>
+                <div class="btn btn-primary" id="women">Women</div>
+                <div class="btn btn-primary" id="kids">Kids</div>
 
             </div>
             <div id="productList"></div>

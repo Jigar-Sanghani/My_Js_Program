@@ -5,7 +5,7 @@ document.getElementById("footer").innerHTML = footer()
 
 let isLogin = localStorage.getItem("isLogin") || false;
 let cartList = JSON.parse(localStorage.getItem("cartList")) || []
-let userdetails = JSON.parse(localStorage.getItem("user"));
+let userdetails = JSON.parse(localStorage.getItem("user")) || []
 if (!isLogin) {
     window.location.href = "/Project/html/signup.html"
 }
@@ -21,7 +21,7 @@ const handleDelete = (index) => {
 
     cartList.splice(index, 1)
     localStorage.setItem("cartList", JSON.stringify(cartList))
-
+    alert("This Item Has Been Deleted !!")
     Mapper(cartList)
 }
 
@@ -35,6 +35,7 @@ const handleQty = (index, opr) => {
 
         if (cartList[index].qty == 1) {
 
+            alert("Sorry Atlist 1 Qty Required !!")
             handleDelete(index)
         }
         else {
@@ -85,7 +86,8 @@ const Mapper = (cartList) => {
         td6.innerHTML = cart.price * cart.qty
 
         let td7 = document.createElement("td");
-        td7.innerHTML = "remove"
+        td7.innerHTML = "Delete";
+        td7.style.cursor = "pointer";
         td7.addEventListener("click", () => handleDelete(i))
 
         tr.append(td1, td2, td3, td4, td5, td6, td7)
@@ -95,5 +97,15 @@ const Mapper = (cartList) => {
 
 }
 
+const handleDeleteall = () =>{
+    document.getElementById("list").innerHTML = ""
+    cartList = [];
+    localStorage.setItem("cartList", JSON.stringify(cartList))
+    alert("All Item Are Deleted !!")
+    Mapper(cartList)
+}
+
 
 Mapper(cartList)
+
+document.getElementById("all").addEventListener("click",handleDeleteall)
