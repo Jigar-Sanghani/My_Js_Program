@@ -1,0 +1,23 @@
+#navbar {
+    margin-bottom: 02%;
+}
+
+#footer {
+    margin-top: 02%;
+}
+
+#all {
+    cursor: pointer;
+}
+
+#list img {
+    width: 100px;
+}
+
+th {
+    text-align: center;
+}
+
+#list {
+    text-align: center;
+}
