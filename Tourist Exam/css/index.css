@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #productlist {
     margin-top: 02%;
     margin-bottom: 02%;
@@ -51,4 +52,53 @@
 .description{
     margin-top: 05%;
     margin-bottom: 05%;
+=======
+#productlist {
+    margin-top: 02%;
+    margin-bottom: 02%;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+#filters {
+    display: flex;
+    justify-content: center;
+
+    div {
+        margin: 01%;
+        font-size: 25px;
+    }
+}
+.img-fluid{
+    height: 300px;
+    width: 1005;
+}
+
+.div{
+    margin: 05%;
+    padding: 05%;
+    border: 01px solid black;
+    border-radius: 10px;
+}
+
+.fa-heart{
+    color: red;
+    font-size: 20px;
+    margin: 05%;
+
+}
+
+.btn2{
+    border: 0px;
+    border-radius: 05px;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    margin-bottom: 05%;
+}
+
+.btn1{
+    cursor: pointer;
+>>>>>>> 66fe1c48fd967d8f4e30347bd40e64491b87537f
 }
