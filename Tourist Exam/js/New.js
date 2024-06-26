@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import navbar from "../components/navbar.js";
 
 document.getElementById("navbar").innerHTML = navbar ()
@@ -20,26 +20,4 @@ const handle = (e) => {
     document.getElementById("comment").innerHTML = `Comment : ${comment}`
 }
 
-=======
-import navbar from "../components/navbar.js";
-
-document.getElementById("navbar").innerHTML = navbar ()
-
-
-let movList = JSON.parse(localStorage.getItem("Book")) || {};
-
-document.getElementById("img1").src = movList.image[0]
-document.getElementById("img2").src = movList.image[1]
-document.getElementById("img3").src = movList.image[2]
-document.getElementById("title").innerHTML = movList.title
-document.getElementById("about").innerHTML = movList.description
-document.getElementById("cost").inertia = movList.cost
-
-const handle = (e) => {
-    e.preventDefault();
-    let comment = document.getElementById("commentInput").value 
-    document.getElementById("comment").innerHTML = comment
-}
-
->>>>>>> 66fe1c48fd967d8f4e30347bd40e64491b87537f
 document.getElementById("form").addEventListener("submit", handle);
