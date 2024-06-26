@@ -7,7 +7,7 @@ let isLogin = localStorage.getItem("isLogin") || false;
 let cartList = JSON.parse(localStorage.getItem("cartList")) || []
 let userdetails = JSON.parse(localStorage.getItem("User-Data")) || []
 if (!isLogin) {
-    window.location.href = "/html/signup.html"
+    window.location.href = "/Tourist%20Exam/html/signup.html"
 }
 const handleData = (e) => {
     e.preventDefault();
@@ -25,13 +25,13 @@ const handleData = (e) => {
         else {
             alert("Log-in Successfully !! " + user.email);
             document.getElementById("navbar").innerHTML = navbar()
-            window.location.href = "/index.html"
+            window.location.href = "/Tourist%20Exam/index.html"
             localStorage.setItem("isLogin", true)
         }
     }
     else {
         alert("Please Sign Up !!")
-        window.location.href = "/html/signup.html"
+        window.location.href = "/Tourist%20Exam/html/signup.html"
     }
 }
 

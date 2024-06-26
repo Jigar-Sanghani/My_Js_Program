@@ -17,7 +17,7 @@ const handleData = (e) => {
 
     localStorage.setItem("User-Data", JSON.stringify(user));
     localStorage.setItem("isLogin", true)
-    window.location.href = "/index.html"
+    window.location.href = "/Tourist%20Exam/index.html"
     alert("Sign-Up Successfully !!")
 
 }

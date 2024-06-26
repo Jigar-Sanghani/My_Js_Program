@@ -6,21 +6,22 @@
 
 
     #img1 {
-        height: 350px;
+        height: 250px;
     }
 
     #img2 {
-        height: 350px;
+        height: 250px;
     }
 
     #img3 {
-        height: 350px;
+        height: 250px;
     }
 }
 
 #main_list{
     border: 01px solid black;
-    margin-top: 02%;
+    margin-top: 01%;
+    margin-bottom: 01%;
 }
 
 #product {
@@ -37,10 +38,24 @@
     #submit{
         margin-bottom: 02%;
     }
+    #price{
+        margin-top: 01%;
+    }
+    #like{
+        margin-top: 01%;
+        margin-bottom: 01%;
+    }
+    #about{
+        margin-top: 01%;
+    }
+}
+
+form{
+    margin: 0px !important;
 }
 
 #comment_Input {
-    height: 200px;
+    height: 100px;
     text-align: center;
     width: 500px;
 }

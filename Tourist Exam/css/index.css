@@ -9,6 +9,7 @@
 #filters {
     display: flex;
     justify-content: center;
+    margin-top: 03%;
 
     div {
         margin: 01%;
@@ -45,4 +46,9 @@
 
 .btn1{
     cursor: pointer;
+}
+
+.description{
+    margin-top: 05%;
+    margin-bottom: 05%;
 }

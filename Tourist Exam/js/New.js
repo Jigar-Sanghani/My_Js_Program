@@ -10,12 +10,13 @@ document.getElementById("img2").src = movList.image[1]
 document.getElementById("img3").src = movList.image[2]
 document.getElementById("title").innerHTML = movList.title
 document.getElementById("about").innerHTML = movList.description
-document.getElementById("cost").inertia = movList.cost
+document.getElementById("cost").innerHTML = `Price : ${movList.cost}`
+document.getElementById("like").innerHTML = `Like : ${movList.likes}`
 
 const handle = (e) => {
     e.preventDefault();
-    let comment = document.getElementById("commentInput").value 
-    document.getElementById("comment").innerHTML = comment
+    let comment = document.getElementById("comment_Input").value 
+    document.getElementById("comment").innerHTML = `Comment : ${comment}`
 }
 
 document.getElementById("form").addEventListener("submit", handle);
