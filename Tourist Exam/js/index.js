@@ -167,8 +167,7 @@ const Mapper = (data) => {
         btn1.classList.add("btn1");
         likes.classList.add("likes");
 
-        places.push(div)
-
+        
         document.getElementById("productlist").append(div)
 
     })
