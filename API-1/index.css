@@ -1,0 +1,13 @@
+#Product_List{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+#Product_List div img{
+    height: 200px;
+}
+#Product_List div{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
