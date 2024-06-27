@@ -6,10 +6,10 @@ const Mapper_Data = (data) => {
         img.classList.add('img-fluid');
 
         let title = document.createElement('h4');
-        title.innerHTML = ele.title;
+        title.innerHTML = `Title : ${ele.title}`;
 
         let cost = document.createElement("h3")
-        cost.innerHTML = ele.price;
+        cost.innerHTML = `Price : ${ele.price}`;
 
         let div = document.createElement("div")
         div.append(img, title, cost)
