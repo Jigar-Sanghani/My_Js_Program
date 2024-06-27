@@ -7,12 +7,12 @@ document.getElementById("navbar").innerHTML = navbar();
 let data = [
     {
         id: 1,
-        title: "Surat",
-        description: "Surat is a city located on the western part of India in the state of Gujarat",
+        title: "Thailand",
+        description: "Thailand, officially the Kingdom of Thailand and historically known as Siam (the official name until 1939), is a country in Southeast Asia.",
         image: [
-            "https://i.ytimg.com/vi/OUPTGDrXDy4/maxresdefault.jpg",
-            "https://media.cntraveller.com/photos/611bed6df902cc2d167b42bc/16:9/w_2580,c_limit/gettyimages-962826702.jpg",
-            "https://www.travelandleisure.com/thmb/iAIrOVW7yWrDG8pZBpKMOvEGuNQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/new-delhi-india-NEWDELHITG0721-60d592e1603349298a0206d67d08582b.jpg",
+            "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcR3P-P4BvkyvX4qoq-_W233UjEGQpC8okQtaNqMkEUXhasf29WIllhfZV0jTH0muKum9L3kdjbEveXtAhvGrslAnUpKRNHEdkOG4OYJPw",
+            "https://lh5.googleusercontent.com/p/AF1QipPCnjdVW-rvr0yppzTCkX_1S9bXB3wYVvBVaUiB=w810-h468-n-k-no",
+            "https://lh5.googleusercontent.com/p/AF1QipNnbbd68-sKGsSREeIkT9UTqnKTgEKFRBbXMlKX=w810-h468-n-k-no",
         ],
         comment: "",
         likes: JSON.parse(localStorage.getItem(`likes_1`)) || 0,
@@ -20,12 +20,12 @@ let data = [
     },
     {
         id: 2,
-        title: "Bangalore",
-        description: "Bangalore is the capital city of India. It is the most populous city in India.",
+        title: "Bangkok",
+        description: "Explore Bangkok · See & Do · Shop · Food · Stay · Festival & Event · Spa & Wellness · Tour Agent · Recreational & Entertainmen.",
         image: [
-            "https://cdn.britannica.com/35/142635-050-8828F21A/Parkland-building-High-Court-Vidhana-Soudha-Karnataka.jpg",
-            "https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/03/11/bengaluru.jpg",
-            "https://static.toiimg.com/photo/62507296.cms"
+            "https://lh5.googleusercontent.com/p/AF1QipMF-ocWKAetApFQh-i2hmgdKQZTXKkxAXTVjqAL=w810-h468-n-k-no",
+            "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTn9KLcrR7V6d_pKOqoGcMx0OWR2H-qUiWDnJaMjYPJSNX1vraiGTvNhgkbmbQl_mcidjYcz45XZrNr0Jg5uGxZdgUq9PUIF1AjykN2Ng",
+            "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcR40d-dR5SYg5AgXpDdCW35saYQzlunY2J201gXSg9Uaa6GgM9EXggxrBdCcko5-kB2ze-VlzGCO53FcusxhF1fANLMD6bhq4wjeXbqTw"
         ],
         comment: "",
         likes: JSON.parse(localStorage.getItem(`likes_2`)) || 0,
@@ -33,12 +33,12 @@ let data = [
     },
     {
         id: 3,
-        title: "Hyderabad",
-        description: "Hyderabad is the capital city of India. It is the most populous city in India.",
+        title: "Maldives",
+        description: "The Maldives is the smallest country in Asia. Including the sea, the territory spans roughly 90,000 square kilometres.",
         image: [
-            "https://static.toiimg.com/thumb/msid-92654212,width-748,height-499,resizemode=4,imgsize-128652/.jpg ",
-            "https://static.standard.co.uk/s3fs-public/thumbnails/image/2017/05/16/11/laurahyatt220417-28.jpg?width=1200",
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfpSznRdkR50ahX6W7rJpw3KvaPeA6_rVwpg&s"
+            "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSqFv-EB2QF31wR8QNauMUrl2vleQOCOA9WngvtOs3-11IbdHdPi7afLJ0GrTwo4XCya-eh_5erHixBgC6n8C5v_B-iDro386r9_6b8Lw ",
+            "https://lh5.googleusercontent.com/p/AF1QipPtUhrlLIfIvS5X-8xKoW1xaI23gHcP-PhOwuMJ=w810-h468-n-k-no",
+            "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRAuRJbaubCe8pwkWPayvwk0nX7gIAJtLsBetJaGvo62IKjw7DzhgGZOn1tRNnt7vdaB_-WvjIT337MK1xJdcGHn9Z_jO6smKckV90FpQ"
         ],
         comment: "",
         likes: JSON.parse(localStorage.getItem(`likes_3`)) || 0,
@@ -46,12 +46,12 @@ let data = [
     },
     {
         id: 4,
-        title: "Chennai",
-        description: "Chennai is the capital city of India. It is the most populous city in India.",
+        title: "Malaysia",
+        description: "Malaysia is a country in Southeast Asia. The federal constitutional monarchy consists of 13 states and three federal territories",
         image: [
-            "https://www.agoda.com/wp-content/uploads/2024/03/Chennai-India-1049x700.jpg",
-            "https://static.toiimg.com/thumb/width-600,height-400,msid-24531101.cms",
-            "https://lp-cms-production.imgix.net/2019-06/f142b3016a4a4bb7bb7c20b1aa38a7c6-chennai-madras.jpg?sharp=10&vib=20&w=1200&w=600&h=400"
+            "https://lh4.googleusercontent.com/proxy/rK3Dfr_vTnHZEy9k1y4lid_4NPPYNkbIWQ5y6J2xcHk1DRGCIx-yj-oOFQDTJmoceMydk7wR86VqtBkqm6YTUevWqd337XHtYkY39wYVRpQ_BakkArjMexMwNjlKaNAJy5cn8vqABRlY9Jf52E_s0nU_jyY0ww=w810-h468-n-k-no",
+            "https://lh5.googleusercontent.com/p/AF1QipPrhzqLbv9f4QnKQNFisJw2VoXbUEpjouVjvS1b=w810-h468-n-k-no",
+            "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTAJ_tZ2zZDrPUXoIJhFelFSWxvtCbmxjFwpzOZdm5uSnH_g8cMzqFjW-kDexkLGa1xsp7bP20XypYA747FHuVpZF5ufKFhFslfwAeUfA"
         ],
         comment: "",
         likes: JSON.parse(localStorage.getItem(`likes_4`)) || 0,
@@ -59,12 +59,12 @@ let data = [
     },
     {
         id: 5,
-        title: "Kolkata",
-        description: "Kolkata is the capital city of India. It is the most populous city in India.",
+        title: "Goa",
+        description: "Goa covers an area of 3702 square kilometers and comprises two Revenue district viz North Goa and South Goa.",
         image: [
-            "https://sundayguardianlive.com/wp-content/uploads/2021/04/Prasenjit-K-Basu_Kolkata.jpg",
-            "https://cdn.enjoytravel.com/img/travel-news/kolkata-was-previously-called-calcutta.jpg",
-            "https://media.gettyimages.com/id/536118160/it/foto/howrah-bridge-in-kolkata.jpg?s=612x612&w=gi&k=20&c=yz7chnnK70TnyP5qYD7Qp4WKLT2ahO85P-WL3o-OhfM="
+            "https://lh5.googleusercontent.com/p/AF1QipPI-KJH8jWecrgce0ItKscubeoCH7Lghtl5yPLG=w810-h468-n-k-no",
+            "https://lh5.googleusercontent.com/p/AF1QipNdh6s-FIUe1bNNbrZ-N3jxuj-UFJQ0fsvQHhkZ=w810-h468-n-k-no",
+            "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRYUKMLmf6Cj_FuyQkxhQUkctKAFbRk_mZX6vSLrcWtxZKPgnU0ThNs9VJpB_yPOimn8cX1E8szj7Oo7ghfNT6-CQ44F_zcBF4yzIcxBg"
         ],
         comment: "",
         likes: JSON.parse(localStorage.getItem(`likes_5`)) || 0,
@@ -72,12 +72,12 @@ let data = [
     },
     {
         id: 6,
-        title: "Mumbai",
-        description: "Mumbai is the capital city of India. It is the most populous city in India.",
+        title: "Singapore",
+        description: "Singapore, officially the Republic of Singapore, is an island country and city-state in maritime Southeast Asia.",
         image: [
-            "https://cdn.britannica.com/26/84526-050-45452C37/Gateway-monument-India-entrance-Mumbai-Harbour-coast.jpg",
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mumbai_Aug_2018_%2843397784544%29.jpg/1200px-Mumbai_Aug_2018_%2843397784544%29.jpg",
-            "https://www.nationsonline.org/gallery/India/Gateway-of-India.jpg"
+            "https://lh5.googleusercontent.com/p/AF1QipOESve-by1VcqtrfnN2XEgjIe7FOmkV7qMyrkpg=w810-h468-n-k-no",
+            "https://lh5.googleusercontent.com/p/AF1QipP-SeCTqcHRHkXCjcB6bhbpdEvnBG2hh7V0C-NO=w810-h468-n-k-no",
+            "https://lh5.googleusercontent.com/p/AF1QipMAHLFfaj0cuB4GH0se2s5CS89ZF8NQqh4_MxXn=w810-h468-n-k-no"
         ],
         comment: "",
         likes: JSON.parse(localStorage.getItem(`likes_6`)) || 0,
@@ -85,26 +85,26 @@ let data = [
     },
     {
         id: 7,
-        title: "Punjab",
-        description: "Punjab is a state in northwestern India. Forming part of the larger Punjab region of the Indian subcontinent.",
+        title: "Hong Kong",
+        description: "Hong Kong is a special administrative region of the People's Republic of China. With 7.4 million .",
         image: [
-            "https://www.nationsonline.org/gallery/India/Gateway-of-India.jpg",
-            "https://cdn.britannica.com/26/84526-050-45452C37/Gateway-monument-India-entrance-Mumbai-Harbour-coast.jpg",
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mumbai_Aug_2018_%2843397784544%29.jpg/1200px-Mumbai_Aug_2018_%2843397784544%29.jpg"
+            "https://lh5.googleusercontent.com/p/AF1QipOtUzHxfhjNLwjGZPbiDIvfa77VJmx-KcxdupzX=w810-h468-n-k-no",
+            "https://lh5.googleusercontent.com/proxy/bo76Tx10Gw-F4bYfE1CCrfFs-pxkw9aAZB3IB5-smibEiWMaMrGLqvUbWr21cnWZdYHqNsn-CBnq0oenWpbX9bFRwORZoNxNBHIpRBphOeQCxV1QkhzadVgpCfMCgFdS6EWjs2FeQuSYP8MXAUIbtr0b1_MXHA=w810-h468-n-k-no",
+            "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQe_GJ_v0rUcpLCd7EmvSpG_mEqzFvpP-qftzKR-HVvWi7pPOMtis9RtyGUKNrx_yadwVldMiF0-_wGTlc5rbY7LvAwC8mGS8CwTnFvJQ"
         ],
         comment: "",
         likes: JSON.parse(localStorage.getItem(`likes_7`)) || 0,
         cost: 15000
-    },  
+    },
     {
         id: 8,
-        title: "Delhi",
-        description: "Delhi is the capital city of India. It is the most populous city in India.",
+        title: "Sydney",
+        description: "Sydney is the capital city of the state of New South Wales and the most populous city in Australia.",
         image: [
-            "https://www.travelandleisure.com/thmb/iAIrOVW7yWrDG8pZBpKMOvEGuNQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/new-delhi-india-NEWDELHITG0721-60d592e1603349298a0206d67d08582b.jpg",
-             "https://i.ytimg.com/vi/OUPTGDrXDy4/maxresdefault.jpg",
-            "https://media.cntraveller.com/photos/611bed6df902cc2d167b42bc/16:9/w_2580,c_limit/gettyimages-962826702.jpg"
-           
+            "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSwTMD2PDfq9fEyfKnlRkHvrBcRsjHWAMlWFBZ780nYQH3gbQ0PNW7ngOTZuiUu7JEh_Z_KejLbbM1M5u71FjNs__YkDORkXCNtQUpqtA",
+            "https://lh5.googleusercontent.com/p/AF1QipMHftgSCBlvyjxYphi4gLqDC_62WWvZvyy1EBuh=w810-h468-n-k-no",
+            "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSZebes8t2FPbDoIMj_JYpA_eYYN--CQdkZ8sRKjKmZfm9R-p2rLAbe3YNGeOm9IFAjuOVnqJ4xkQLCfjcWE4zhIVwboTDVY_i2XTfLxQ"
+
         ],
         comment: "",
         likes: JSON.parse(localStorage.getItem(`likes_8`)) || 0,
@@ -130,11 +130,10 @@ const likehandle = (index) => {
     localStorage.setItem(`likes_${data[index].id}`, JSON.stringify(data[index].likes));
 }
 
-let places =[]
 
 const Mapper = (data) => {
     document.getElementById("productlist").innerHTML = ""
-    data.map((ele,index) => {
+    data.map((ele, index) => {
         let title = document.createElement("h1")
         title.innerHTML = ele.title
         let description = document.createElement("h6")
@@ -151,8 +150,8 @@ const Mapper = (data) => {
         btn1.addEventListener("click", () => { likehandle(index) })
         let btn2 = document.createElement("button")
         btn2.innerHTML = "Book"
-        btn2.addEventListener("click",()=>{
-            localStorage.setItem("Book",JSON.stringify(ele));
+        btn2.addEventListener("click", () => {
+            localStorage.setItem("Book", JSON.stringify(ele));
             window.location.href = "/Tourist%20Exam/html/New.html"
         })
         btn_parent.append(btn1, btn2)
@@ -174,47 +173,53 @@ const Mapper = (data) => {
 
     })
 }
+
+document.getElementById("LTH_c").addEventListener("click", () => {
+    data.sort((a, b) => a.cost - b.cost);
+    Mapper(data)
+});
+
+document.getElementById("HTL_c").addEventListener("click", () => {
+    data.sort((a, b) => b.cost - a.cost);
+    Mapper(data)
+});
+
+document.getElementById("LTH_l").addEventListener("click", () => {
+    data.sort((a, b) => a.likes - b.likes);
+    Mapper(data)
+});
+
+document.getElementById("HTL_l").addEventListener("click", () => {
+    data.sort((a, b) => b.likes - a.likes);
+    Mapper(data)
+});
 Mapper(data)
 
-// const HandleSort = (orderBy) => {
-//     if (orderBy == places.likes) {
-//         let temp = places.sort((a, b) => a.price - b.price)
-//         Mapper(temp)
-//         console.log(temp);
-//     }
-//     else {
-//         let temp = places.sort((a, b) => b.price - a.price)
-//         console.log(temp);
-//         Mapper(temp)
-//     }
 
-// }
-
-// const handleSearch = (value) => {
-//     let temp = places.filter((ele) => ele.title.includes(value))
-//     Mapper(temp)
-// }
+const handleSearch = (value) => {
+    let temp = data.filter((ele) => ele.title.includes(value))
+    Mapper(temp)
+}
 
 
 
-// const handleSearchData = (e) => {
-//     e.preventDefault()
+const handleSearchData = (e) => {
+    e.preventDefault()
 
-//     let value = getvalue("searchValue")
+    let value = getvalue("searchValue")
 
-//     handleSearch(value)
+    handleSearch(value)
 
-// }
+}
 
 
-// const handleInput = (e) => {
-//     let value = getvalue("searchValue")
-//     handleSearch(value)
-// }
+const handleInput = (e) => {
+    e.preventDefault()
+    let value = getvalue("searchValue")
+    handleSearch(value)
 
-// document.getElementById("searchValue").addEventListener("keypress", handleInput)
-// document.getElementById("searching").addEventListener("submit", handleSearchData)
-// document.getElementById("LTH_l").addEventListener("click", () => HandleSort("LTH_l"))
-// document.getElementById("HTL_l").addEventListener("click", () => HandleSort("HTL_l"))
-// document.getElementById("LTH_c").addEventListener("click", () => HandleSort("LTH_c"))
-// document.getElementById("HTL_c").addEventListener("click", () => HandleSort("HTL_c"))
+}
+
+document.getElementById("searchValue").addEventListener("keypress", handleInput)
+document.getElementById("searching").addEventListener("submit", handleSearchData)
+
