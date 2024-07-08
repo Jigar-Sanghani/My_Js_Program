@@ -1,6 +1,6 @@
 #Product_List{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
 }
 #Product_List div img{
     height: 200px;
