@@ -1,0 +1,32 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.parent-short{
+    width: 300px;
+    height: 500px;
+}
+.shortA{
+    text-decoration: none;
+    color: black;
+}
+#Product_List{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.parent{
+    display: flex;
+}
+.img-fluid{
+    height: 150px;
+    width: 150px;
+}
+.div{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

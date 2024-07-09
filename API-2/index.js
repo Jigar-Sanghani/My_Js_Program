@@ -17,7 +17,7 @@ const Handle_Data = (e) => {
     }
     else {
         alert("Update-User")
-        Update_User(id, data)
+        Update_User(ele.id, data)
     }
 
 }
@@ -25,7 +25,7 @@ const Handle_Data = (e) => {
 
 const Update_Input_Value = (ele) => {
 
-    document.getElementById('name').value = ele.username
+    document.getElementById('name').value = ele.name
     document.getElementById('email').value = ele.email
     document.getElementById('password').value = ele.password
     document.getElementById('submit').value = "Update"

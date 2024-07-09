@@ -1,0 +1,62 @@
+
+#main {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 02%;
+
+
+    #img1 {
+        height: 200px;
+    }
+}
+
+#main_list{
+    border: 01px solid black;
+    margin-top: 01%;
+    margin-bottom: 01%;
+}
+
+#product {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    #title{
+        margin-top: 02%;
+    }
+    #submit{
+        margin-bottom: 02%;
+    }
+    #price{
+        margin-top: 01%;
+    }
+    #like{
+        margin-top: 01%;
+        margin-bottom: 01%;
+    }
+    #about{
+        margin-top: 01%;
+    }
+}
+
+form{
+    margin: 0px !important;
+}
+
+#comment_Input {
+    height: 100px;
+    text-align: center;
+    width: 500px;
+}
+
+#filter button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 17px;
+}
