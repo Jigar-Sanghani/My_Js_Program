@@ -1,3 +1,116 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#main_parents{
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsgbkLYgbTGcmkjiB7LgVRCMmdO_xcTkWAOg&s");
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#parents{
+    height: 350px;
+    width: 60%;
+    border: 1.5px solid white;
+    backdrop-filter: blur(30px);
+    border-radius: 15px;
+    background-color: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+}
+
 #form{
+    display: flex;
+    /* margin-top: 07%; */
+}
+
+#city{
     text-align: center;
+    width: 10%px;
+    height: 05%px;
+    border: none;
+    border-radius: 13px 0px 0px 13px;
+}
+
+.search-icon{
+    height: 30px;
+    width: 40px;
+    background-color: white;
+    border-radius: 0px 13px 13px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.containerr{
+    height: 400px;
+    width: 700px;
+}
+.name{
+    height: 200px;
+    width: 200px;
+    color: White;
+}
+
+#cityName{
+    font-size: 40px;
+    margin-top: 04% !important;
+    margin-bottom: 03%;
+    text-align: center;
+}
+
+#humidity{
+    font-size: 25px;
+}
+
+#temperature{
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: end;
+    margin-left: 05%;
+}
+#windSpeed{
+    margin-top: 05% !important;
+    color: white;   
+    font-size: 25px;
+    
+}
+
+#area{
+    margin-top: 05%;
+    font-size: 25px;
+}
+
+#first{
+    height: 100px;
+    width: 550px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#second{
+    width: 40%;
+    margin-right: 03%;
+    text-align: center;
+}
+
+#main_page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }

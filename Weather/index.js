@@ -1,27 +1,30 @@
 
+const Mapper = (data) => {
+    let weatherIcon = document.getElementById("weatherIcon");
+    let cityName = document.getElementById("cityName");
+    cityName.innerHTML = `City : ${data.name}`;  
+    let temperature = document.getElementById("temperature");
+    temperature.innerHTML = `${Math.round(data.main.temp - 273.15)}°c`;
+    let humidity = document.getElementById("humidity");
+    humidity.innerHTML = `Humidity : ${data.main.humidity} % `;
+    let windSpeed = document.getElementById("windSpeed");
+    windSpeed.innerHTML = `WindSpeed : ${data.wind.speed} m/s`;
+    let area  = document.getElementById("area");
+    area.innerHTML = `Area : ${data.base}`
+}   
 
-
-const mapper = (data) => {
-    console.log(data.name);
-}
-
-const getData = async (city) => {
-    let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q={city}&appid{ab1498f5c740b7e9ab0993a3b31ef43d}}`)
-    console.log(res);
-    mapper(res)
-
-}
-
-
-
-
-const Data_handle = (e) => {
-    e.preventDefault();
-
-    let city = document.getElementById('city').value;
-
-    getData(city)
+const API = async (cityName) => {
+    let request = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=ab1498f5c740b7e9ab0993a3b31ef43d&units=matric`)
+    let response = await request.json()
+    Mapper(response)
+    console.log(response);
 }
 
 
-document.getElementById("form").addEventListener("submit", Data_handle)
+const dataInput = (e) =>{
+    e.preventDefault()
+    let cityName = document.getElementById("city").value 
+    API(cityName)
+}
+
+document.getElementById("Search-Icon").addEventListener("click", dataInput)
