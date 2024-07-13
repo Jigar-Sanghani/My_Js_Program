@@ -1,4 +1,4 @@
- export const Delete_User = async (id) => {
+export const Delete_User = async (id) => {
     let req = await fetch(`http://localhost:3000/user/${id}`, {
         method: "DELETE",
     })

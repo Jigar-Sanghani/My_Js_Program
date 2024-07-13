@@ -11,6 +11,7 @@ const handleData = (e)=>{
         email : getvalue("email"),
         password : getvalue("password")
     }
+    
 }
 
 
