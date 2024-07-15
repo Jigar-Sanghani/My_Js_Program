@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio_Player</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAACUCAMAAADhypYgAAAAbFBMVEX////u7u4AAADt7e3s7Ozz8/P5+fn29vYFBQVLS0vp6en8/PwJCQnQ0NBPT0+bm5s1NTVhYWF+fn7j4+Onp6fAwMApKSk9PT3KyspYWFhvb2/d3d1oaGi0tLSIiIh1dXUfHx8XFxeTk5NEREQKsm7lAAAJT0lEQVR4nO2cDZuqLBCGRURMMy2zLPvu///HF7BaBlMnw9qzr3PO7l675AM3X8I44ji6MUoeRhlICn9SiOfrKb6nJYXf0nM8zUIoGOpJ4CKiX0VgAb+j5zkaPaHwgxo+8bA1431Hj7SB6Bo2Mh5SbwQZQUaQN0DGWesLeiPIPwXyb42RXmstpl9lLAa/o+c5kW6MsIcRBpK0FEa4nsKJdg2BesCak6Aea9ZrLh+gxzZxfdlNGaVi3Sq+oF6omVHTuhk1fTOPeC8s4/uAPOur1AsZ8yMOLvK5ZuAiR0/hoD4jLYHAQgwMIpOYqL4imc9s2uaYlOhJwQaIvCjk8XbqWrdVwpDls9MilPL8ZB9D2kLMR58DIaxcuUEwCMnB/xiImLKcnesOw+GmBap8dlqElWfRIAORHD7XtWi0HGCgVxa4m+xDIJG4QSaDgbjurPwYCOVDgkziPiCaGUsKLcVcotABWySAII3lc3zd4CKvOYnrKWKRFw0LEiHK5+iM5uJNT4It52nNI2tm2K51z66lfNTSxmpgkO7y2drqfgVkiD377wbp37XOm/kbtg7AcuebXWsdVhsncBHcS4EUfS/FfbFMQIF8oGulJZGZtzyJatYj5DeBZJTe9JRbQH3V9NRfo6cgdsfIOyD99Qj7KyAWWqRXn24B6T9GnoO06NmZfiNci+D08C1iwWVae5xcn7Vob70nYwTjMm0v4I+1+mDNZXwavqOXmCCY8kHr6Xyo7UfuIL30zF1av43VCDKCPAUJfgnI+jUQ79eDgFUtfBbTvBR2aovG74FMr5PKrppNgF2bk1Kg9U2Qd32n0Pn6zRaxaiPInwAxHW8/Brx1XWutwUCay+e0ukJR/lORNLA7yEeUD7hMa87p3+Iy7S7f/8Nl+mdA/ozLdAQZQWyBWPNrDQTS16/VH+R0PB4XvW2DfKzwEW88IyrWTN89gSi0EGysqJ7iWffG97+PpBlRucCAMpAV1NOT0E7s5vuIPd9vSehNT3usYFbM47FCVPPGGy1CO8tHwKKxMeiSMdoaJPmsa/XVY/UHPfcrW/TMpTDwwYKkXi7Tfnotfq1mPQPkt/i1mkD+OQfdCDKCjCAjyAgygowgFkD+5cfTWsW88YJ8bT/Ceuu17EfQW92/Govy70YHjSAjyEAg42D/bS3yV0HectD11usbCji2yG9rkb5Pdcn9YbF6mbgO8poeuT95ls+c6yCYp7rAK86wv/gRy+L9Uto+L8M6iI/UY76Mf3qILYUYr7lM/VaJZ5FSmMgHj4iUMD9sZyuVzzTdbJNtw36kQ88TaoRn+4eYm86PybE5Xqsl8gGCIDZClPnlYVPle49HOp/d5yDtepR5QuwyWwW62vkEXzIdaofIw8v6lo/KMHjybit2h+j55LKaPqTuPz4C4sfXG8WjFoPADDXDgjjx7Kf0d80g+AQIT8zaf2YIkFB0K4ISGwKEkQUmawyImDLCgxn19ykQFi7MDtwbxGPZQc5O3wARVRjcB8X7LUKU2DdahLHk9vp9Z+YdIJH4x5ZnF1Mn1kEoJfnaRYbCIkDiFTaq1jJIyLIdLuNuEPlgOkVHB1sHWaI5ECA5bnwMAEKyCT7CunOw87V1EK/ZBwvfYdprHIF29w3MO7FbLeNb9Ii/hBdoAnU85DtWRLOWjQvlGxfkJn85r6uI/Gcg7Xpz+Hl5vXwx4OlsYnery2LXAHFPuyQv4vywqU+iHVtdVhgvJIjLt0kRF/lFrL3M0C+7XhS+1EurOJYlE/s57sWLaW3R2AGSGMt+95SEKh6ZxAezQaw66MROcgJB3FUusqVEdHhOLma5Ohx07AhaI3DTPRHjWHYVHib1ZbxFBx11YP8J3OQefiVmj9Do8h0twsDnpeySkaqwzONiPQfb127XikA1iQZ5xIpRFjl740yqDpB4on84cDelUFNDVyyJ/dgY8BbdQZTKsa4Pdjd5nAUt53O2wYDc9Viuj3UhmkgVlSq+sWyBBOkxa1E/d2HfyvlDXQaeGduU9hbh+xUAOeWckqpemNhvie1Wwxh5v2tRvocldUutazm11y7SjLJ2EL2bpgU3HXR6skUQWrWIbo84w+o1cGPSXJddLaJX+coASeAgmdl0mbLCAFk+YkblGPGNhfEsU2O3QY/v4f1wugRRpt4BgmxK1BhBrrVCkHXgHiOqxRZmVwiyCUnYrCcHu9533EOoPUBn5QaOkfkj1cYRoI5xm5qW6s++/CLcvCNeuEpp0HMyY5I7x07k+7fY0cgcjtuf2FIbR4DCFgncuaqdSHz3udo66ra8CTfo8R1okcDd0apCpV5pih1Q5UODHGB7K5Jb5oID3otPRdSuB+YGqbthatso/sfmeY+rvV2Q3IX7ETG/55T7Ps/ky84Q5HH8XZNert1Iqh57ysNKzDXtmqHKhwYpUxNETE6LJDmmxugJ5BCp4sUb9eTkoG3MlPL1kCSL1DUb3t1ZPnCSLXBHY4oPnfN2vUj1re6drtr1TPe48uFBihNqzy7y3oXtetVI6N6zq6aaeLjyoUFoiHP7BvrobPaiLDDOBwmy185kteRpLFYd+d4yn5NbtTfr+Q7D1oqj3yOstAjzanu3Wr4ydYU7RDXpdpfK9BxcZMVBR1jZcYRs1VkuuPN5Q5Tf8gAWJXa6lkf84tpKokCOcnGC0OPlpFnpbkfW+yhpzcwW8Uh9LWKAiLtk5IA+3azXISZtXtZAGvVeOwI02qvMg8e3H4jqx66MfI7U8/PJ8wa++y53sQ/fYLd5BGgx0R9ewszd6SJ0PJyeOum6mGnPQE2O4KiOx2072QBEPhDNOmNHRK8pt7Wc790qXXpR1BboDPTkcrNcKLGgRqJcduoqpN7L0UGR4+2vNYzK6RnLLUVLxoaeHEpE9lVzGpa/7opbUAZS70WQahyXNc+isFXOVDoeRI5PJwovT17zXS/JPTMbIM1hSXw/AxmfdrFzu5mju9bD2H4OmuS8LbRVyVBd65Y3j8p8u7mu03Q9mV8K1Rgv1SDUy/LF7JoKsevmUMCY92G61qNFPI8xJ+JhFlbv4/5c+DKIvH+qMCUpJn5lPlheDQsifc7KR0Olu/bmhOgJIkgc5kkd6cNWQVTO50DkUaW3LioddFoVvg4S/Sw9hCxTd+zPgWgXoV+YGVLv/wHyQpQpKuMh9Ui/49ZJv1OfBtSj/wFOkxQEvZxVogAAAABJRU5ErkJggg=="
+        type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div id="navbar">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">Home</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="#">Music</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div id="main_page">
+            <div id="left_profile">
+                <img src="https://imgeng.jagran.com/images/2024/05/29/article/image/pushpa%202%20song%20anga-1716966063701.jpg" id="images" alt="" class="img-fluid">
+                <div id="buttom">
+                    <audio id="auto" src="https://rr2---sn-bu2a-nu8e.googlevideo.com/videoplayback?expire=1721042861&ei=TbOUZp7rLtTQi9oP1Im0oAk&ip=23.88.69.123&id=o-AGgLOtpQIZ-2ziJWSaZBHJRnHcmJY0XhRpPZQN9tDUWW&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&vprv=1&svpuc=1&mime=audio%2Fwebm&rqh=1&gir=yes&clen=3472627&dur=193.101&lmt=1714896416813359&keepalive=yes&c=ANDROID_TESTSUITE&txp=4502434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgC5jCOww0fyerWzGq1flLUrzGTPECTKopImBMjN6ohBACIQDnBq_WB2BCHxZCU_m65PDoB4eSCUh6vwWoKEgcJRJt-w%3D%3D&redirect_counter=1&rm=sn-4g5ezl7l&fexp=24350516,24350518&req_id=bb2bb8df6932a3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=5w&mip=27.116.48.74&mm=31&mn=sn-bu2a-nu8e&ms=au&mt=1721020229&mv=u&mvi=2&pl=24&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AHlkHjAwRQIgEMHGUoXluFbeaPu3zn2qd75Gs0Cd2n7LLtPWXx3-NisCIQDdaivNUSrsExkBxBm1UikD8lS9EjH2mYKowXnBmTGPHQ%3D%3D" controls autoplay ></audio>
+                </div>
+            </div>
+        </div>
+
+        <div id="music_files">
+            <div id="files">
+                <div id="show_music"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
