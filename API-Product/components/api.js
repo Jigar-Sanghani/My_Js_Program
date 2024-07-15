@@ -1,12 +1,12 @@
 export const Delete_User = async (id) => {
-    let req = await fetch(`http://localhost:3000/user/${id}`, {
+    let req = await fetch(`https://json-server-2-e6hf.onrender.com/users/${id}`, {
         method: "DELETE",
     })
 }
 
 
 export const Is_Exists = async (email) => {
-    let req = await fetch(` http://localhost:3000/user?email=${email}`);
+    let req = await fetch(` https://json-server-2-e6hf.onrender.com/users?email=${email}`);
     let res = await req.json()
 
     if (res.length > 0) {
@@ -24,7 +24,7 @@ export const Create_User = async (user) => {
         alert("User Already Exists !!");
     }
     else {
-        fetch("http://localhost:3000/user", {
+        fetch("https://json-server-2-e6hf.onrender.com/users", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(user)
@@ -42,13 +42,13 @@ export const Create_User = async (user) => {
 
 export const Get_User = async () => {
 
-    let req = await fetch("http://localhost:3000/user");
+    let req = await fetch("https://json-server-2-e6hf.onrender.com/users");
     let res = await req.json()
     return res
 }
 
 export const Login_user = async (user) => {
-    let req = await fetch(` http://localhost:3000/user?email=${user.email}`);
+    let req = await fetch(`https://json-server-2-e6hf.onrender.com/users?email=${user.email}`);
     let res = await req.json()
 
     if (res.length == 0) {
@@ -65,7 +65,7 @@ export const Login_user = async (user) => {
 }
 
 export const Update_User=async(id ,data)=>{
-  let req=await  fetch(`http://localhost:3000/user/${id}`, {
+  let req=await  fetch(`https://json-server-2-e6hf.onrender.com/users/${id}`, {
         method: "PATCH",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(data)

@@ -1,5 +1,30 @@
 {
-    "user":[],
+    "user":[
+        {
+            "id": "c785",
+            "name": "Deep",
+            "email": "deep@example.com",
+            "password": "deep",
+            "todoList": [
+              
+            ]
+          },
+          {
+            "id": "3002",
+            "name": "purv",
+            "email": "purv@example.com",
+            "password": "purv",
+            "todoList": [
+              
+            ]
+          },
+          {
+            "id": "ff3e",
+            "name": "Param",
+            "email": "param@example.com",
+            "password": "param"
+          }
+    ],
     "product":[],
     "cart":[]
 }
