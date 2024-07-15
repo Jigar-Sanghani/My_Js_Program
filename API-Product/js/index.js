@@ -1,7 +1,6 @@
-import footer from "../components/footer.js";
-import navbar from "../components/navbar.js";
-import slider from "../components/slider.js";
 
-document.getElementById("navbar").innerHTML = navbar();
-document.getElementById("slider").innerHTML = slider();
-document.getElementById("footer").innerHTML = footer();
+let isLogin = localStorage.getItem("isLogin") || false;
+
+if (!isLogin) {
+    window.location.href = "/Project/html/signup.html"
+}

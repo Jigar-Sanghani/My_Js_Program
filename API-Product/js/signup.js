@@ -1,18 +1,23 @@
-import navbar from "../components/navbar.js";
-import footer from "../components/footer.js";
+
+import { Create_User, Is_Exists } from "../components/api.js";
 import getvalue from "../components/getvalue.js";
 
-document.getElementById("navbar").innerHTML = navbar();
-document.getElementById("footer").innerHTML = footer();
-
-const handleData = (e) =>{
+const handleData = (e) => {
     e.preventDefault();
-    let data = {
-        name : getvalue("name"),
-        email : getvalue("email"),
-        password : getvalue("password")
+    let user = {
+        username: getvalue("name"),
+        email: getvalue("email"),
+        image: getvalue("image"),
+        password: getvalue("password")
     }
+
+    let islogin = Is_Exists(user.email)
+    window.location.href = "API-Product/index.html"
+    alert("Sign-Up Successfully !!")
+
+    Create_User(user)
+
 }
 
 
-document.getElementById("form").addEventListener("submit", handleData);
+document.getElementById("form").addEventListener("submit", handleData)
