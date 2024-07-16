@@ -25,7 +25,7 @@ body{
     height: 40px;
 }
 
-#Search_Icon{
+.Search_Icon{
     color:black;
     height:40px;
     width: 50px;

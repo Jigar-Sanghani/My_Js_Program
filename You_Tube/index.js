@@ -28,7 +28,7 @@ const   mapper = (data_1) => {
 }
 
 const Handle_Mapper = async (Search_Data) => {
-    let data_2 = await API(Search_Data);
+    let data_2 = await get_vedio(Search_Data);
     mapper(data_2);
 }
 
