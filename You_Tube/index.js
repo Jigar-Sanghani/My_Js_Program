@@ -1,5 +1,5 @@
 const get_vedio = async (data) => {
-    let req = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${data}&type=video&key=AIzaSyAOvbhK9MQykS28uxJ7wPydiiNOj0jHAOU`)
+    let req = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${data}&type=video&key=AIzaSyD1BpO_GqBElrv0mDbudEx6VREJrPPKz4I`)
     let res = await req .json()
     return res.items;
 }
@@ -43,4 +43,4 @@ const Search_Handle = (e) => {
     }
 }
 
-document.getElementById("Video_Search").addEventListener("submit",Search_Handle)
+document.getElementById("Video_Search").addEventListener("keypress",Search_Handle)
