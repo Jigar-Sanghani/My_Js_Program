@@ -50,3 +50,5 @@ const Search_Handle = (e) => {
 }
 
 document.getElementById("Video_Search").addEventListener("keypress", Search_Handle)
+
+Handle_Mapper();
