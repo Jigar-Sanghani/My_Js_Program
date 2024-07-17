@@ -4,9 +4,8 @@ const get_vedio = async (data) => {
     return res.items;
 }
 
-
 const   mapper = (data_1) => {
-    data_1.map((ele)=>{
+    data_1.map((ele) => {
         let img = document.createElement('img')
         img.src = ele.snippet.thumbnails.medium.url
         img.classList.add('img-fluid')
@@ -33,7 +32,7 @@ const Handle_Mapper = async (Search_Data) => {
 }
 
 const Search_Handle = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (e.key == "Enter") {
 
@@ -43,4 +42,4 @@ const Search_Handle = (e) => {
     }
 }
 
-document.getElementById("Video_Search").addEventListener("keypress",Search_Handle)
+document.getElementById("Video_Search").addEventListener("submit",Search_Handle)

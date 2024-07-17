@@ -13,11 +13,11 @@ document.getElementById("title").innerHTML = movList.title
 document.getElementById("about").innerHTML = movList.description
 document.getElementById("cost").innerHTML = `Price : ${movList.cost}`
 document.getElementById("like").innerHTML = `Like : ${movList.likes}`
-
+ 
 const handle = (e) => {
     e.preventDefault();
     let comment = document.getElementById("comment_Input").value 
-    document.getElementById("comment").innerHTML = `Comment : ${comment}`
+    document.getElementById("comment").append(` ${comment} , ` )
 }
 
 document.getElementById("form").addEventListener("submit", handle);
