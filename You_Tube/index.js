@@ -36,7 +36,9 @@ const Handle_Mapper = async (search) => {
 }
 
 const Search_Handle = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
+    // e.preventDefault(); 
+
     if (e.key == "Enter") {
 
         let Result_Search = document.getElementById("Video_Search").value
@@ -45,4 +47,4 @@ const Search_Handle = (e) => {
     }
 }
 
-document.getElementById("Video_Search").addEventListener("keypress",Search_Handle)
+document.getElementById("Video_Search").addEventListener("keypress",Handle)
