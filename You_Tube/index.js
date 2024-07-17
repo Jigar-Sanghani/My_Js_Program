@@ -1,5 +1,5 @@
 const get_vedio = async (search) => {
-    let req = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${search   }&type=video&key=AIzaSyDNVBaE4O5vcC3LWmPtmk7Cnzx0GvmXWVA`)
+    let req = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${search}&type=video&key=AIzaSyDNVBaE4O5vcC3LWmPtmk7Cnzx0GvmXWVA`)
     let res = await req .json()
     return res.items;
 }
