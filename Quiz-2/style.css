@@ -3,7 +3,7 @@
 }
 
 
-.title {
+.title{
     font-size: 25px;
     font-size: 600;
 }
@@ -62,7 +62,7 @@
     border: 02px solid black;
 }
 
-#main_side {
+#main_side{
     height: 400px;
     border: 02px solid black;
     margin: 04%;
@@ -72,16 +72,16 @@
     justify-content: space-around;
 }
 
-#video {
+#video{
     height: 300px;
     width: 40%;
-    border: 02px solid black;
+    border: 02px solid black; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#main_page {
+#main_page{
     height: 300px;
     width: 40%;
     border: 02px solid black;
@@ -92,4 +92,8 @@
     align-items: center;
     flex-direction: column;
     gap: 50px;
+}
+
+#underline{
+    text-decoration: underline;
 }
