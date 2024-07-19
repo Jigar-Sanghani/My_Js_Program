@@ -1,3 +1,5 @@
+import navbar from "../components/navbar.js";
+
 const getLocation = () => {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
@@ -16,3 +18,6 @@ document.addEventListener("contextmenu", (e) => {
     e.preventDefault();
     alert("Right Click Is Disabled ||");
 })
+
+
+document.getElementById("navbar").innerHTML = navbar()
