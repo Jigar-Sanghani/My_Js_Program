@@ -93,4 +93,9 @@ let img=  document.getElementById("images").src = (ele.image);
 
 }
 
+document.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+    alert("Right Click Is Disabled ||");
+})
+
 mapper(music_system);
