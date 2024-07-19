@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excel-Form</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div class="form-container" id="product">
+    <div class="container">
         <h1> ----- Fill Form For Excel ----- </h1>
-        <form id="myForm" method="post" name="google-sheet">
-            <input type="text" id="Name" placeholder="Enter Your Name" required><br><br>
-            <input type="email" id="Email"  placeholder="Enter Your Email" required><br><br>
-            <input type="password" id="Password"  placeholder="Enter The Password" required><br><br>
-            <input type="number" id="Age"  placeholder="Enter The Age" required><br><br>
-            <textarea id="Bio"  placeholder="Enter Your Bio" required></textarea><br><br>
-            <input type="number" id="Phone"  placeholder="Enter Phone No." required><br><br>
-            <input type="text" id="Address"  placeholder="Enter Your Address" required><br><br>
-            <input type="text" id="City"  placeholder="Enter Your City" required><br><br>
-            <input type="text" id="State"  placeholder="Enter Your State" required><br><br>
-            <input type="text" id="Country" placeholder="Enter Your Country" required><br><br>
-            <input id="sub" type="submit" value="Submit">
+        <form id="myForm" method="post" action="" name="contact-form">
+            <input type="text" id="Name" placeholder="Enter Your Name" name="Name" required><br><br>
+            <input type="email" id="Email" placeholder="Enter Your Email" name="Email" required><br><br>
+            <input type="password" id="Password" placeholder="Enter The Password" name="Password" required><br><br>
+            <input type="number" id="Age" placeholder="Enter The Age" name="Age" required><br><br>
+            <textarea id="Bio" placeholder="Enter Your Bio" name="Bio" required></textarea><br><br>
+            <input type="number" id="Phone" placeholder="Enter Phone No." name="Phone.No" required><br><br>
+            <input type="text" id="Address" placeholder="Enter Your Address" name="Address" required><br><br>
+            <input type="text" id="City" placeholder="Enter Your City" name="City" required><br><br>
+            <input type="text" id="State" placeholder="Enter Your State" name="State" required><br><br>
+            <input type="text" id="Country" placeholder="Enter Your Country" name="Country" required><br><br>
+            <input id="submit" type="submit" value="Submit">
         </form>
     </div>
+
 </body>
-<script src="./script.js "></script>
+<script src="./script.js"></script>
+
 </html>

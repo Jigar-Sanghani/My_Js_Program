@@ -1,17 +1,14 @@
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwxrr9gY3hHl86SuG0uv8nQa0NJHnmqFYqzCzrqM0w4wWDuE-B--j9r9iwch5FHZK6o/exec'
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbw337r75pZZ4gMXAm8hgrsx514txf2dj3wjPZBNYg8bT0nKUEdO9DsRElsjF2bHoEpy/exec';
-
-const form = document.forms['google-sheet'];
+const form = document.forms['contact-form']
 
 form.addEventListener('submit', e => {
-    e.preventDefault();
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-            alert("Thanks for contacting us! We will contact you soon.");
-        })
-        .catch(error => console.error('Error!', error.message));
-    window.location.href = 'https://docs.google.com/spreadsheets/d/1FldHIBZDU-qMcZsWJ2nnD7pFwIm5SftEdgiz0noycnY/edit?gid=0#gid=0';
-});
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
 
 document.addEventListener("contextmenu", (e) => {
     e.preventDefault();

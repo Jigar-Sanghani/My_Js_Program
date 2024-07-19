@@ -5,7 +5,7 @@
 }
 
 
-#product {
+.container {
     border: 02px solid black;
     border-radius: 05px;
     text-align: center;
@@ -29,7 +29,7 @@
         font-size: 20px;
     }
 
-    #sub {
+    #submit {
         height: 50px;
         width: 350px;
         border: 0px;
@@ -39,7 +39,7 @@
         cursor: pointer;
     }
 
-    #sub:hover {
+    #submit:hover {
         transform: scale(1.05);
     }
 }
