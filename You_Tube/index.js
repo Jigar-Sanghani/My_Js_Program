@@ -51,4 +51,9 @@ const Search_Handle = (e) => {
 
 document.getElementById("Video_Search").addEventListener("keypress", Search_Handle)
 
+document.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+    alert("Right Click Is Disabled ||");
+})
+
 Handle_Mapper();
