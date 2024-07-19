@@ -1,47 +1,60 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar{
+body {
+
+    background-image: url("https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148881320.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
     background-color: #EB5B25;
-    a{
+
+    a {
         color: #FFFFFF !important;
         font-size: 18px;
     }
 
-    img{
+    img {
         border-radius: 50%;
     }
 
-    button{
+    button {
         color: #EB5B25;
         background-color: #FFFFFF;
     }
 }
 
 .signup {
-    border: 02px solid black;
+    border: 02px solid white;
     border-radius: 05px;
     text-align: center;
     font-size: 20px;
-    margin:03%;
+    margin: 10%;
+    backdrop-filter: blur(30px);
+    background-color: transparent;
 
     h1 {
         margin: 20px;
+        color: white;
     }
 
     label {
         margin-bottom: 5px;
         font-weight: bold;
     }
-    
+
     input {
         height: 50px;
         width: 350px;
         text-align: center;
         font-size: 20px;
+        border: 0px;
+        border-radius: 10px;
     }
 
     select {
@@ -66,4 +79,3 @@
         transform: scale(1.05);
     }
 }
-

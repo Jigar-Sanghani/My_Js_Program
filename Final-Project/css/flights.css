@@ -1,21 +1,29 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar{
+body {
+
+    background-image: url("https://media.istockphoto.com/id/155439315/photo/passenger-airplane-flying-above-clouds-during-sunset.jpg?s=612x612&w=0&k=20&c=LJWadbs3B-jSGJBVy9s0f8gZMHi2NvWFXa3VJ2lFcL0=");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
     background-color: #EB5B25;
-    a{
+
+    a {
         color: #FFFFFF !important;
         font-size: 18px;
     }
 
-    img{
+    img {
         border-radius: 50%;
     }
 
-    button{
+    button {
         color: #EB5B25;
         background-color: #FFFFFF;
     }
@@ -26,7 +34,9 @@
     border-radius: 05px;
     text-align: center;
     font-size: 20px;
-    margin: 03%;
+    margin: 10%;
+    backdrop-filter: blur(30px);
+    background-color: transparent;
 
     h1 {
         margin: 20px;
@@ -42,6 +52,8 @@
         width: 350px;
         text-align: center;
         font-size: 20px;
+        border: 0px;
+        border-radius: 10px;
     }
 
     select {
