@@ -21,3 +21,8 @@ const handle = (e) => {
 }
 
 document.getElementById("form").addEventListener("submit", handle);
+
+document.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+    alert("Right Click Is Disabled ||");
+})
