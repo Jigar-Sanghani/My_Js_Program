@@ -211,6 +211,10 @@ const handleSearchData = (e) => {
 
 }
 
+document.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+    alert("Right Click Is Disabled ||");
+})
 
 const handleInput = (e) => {
     e.preventDefault()
