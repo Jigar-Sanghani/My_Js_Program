@@ -6,22 +6,22 @@ document.addEventListener("contextmenu", (e) => {
     alert("Right Click Is Disabled ||");
 })
 
-const flightData = (e) => {
+const handleData = (e) => {
     e.preventDefault();
     let user = {
-        from: getvalue("from"),
-        to: getvalue("to"),
-        departure: getvalue("departure"),
-        return: getvalue("return"),
-        seat : getvalue("seat")
+        username: getvalue("name"),
+        email: getvalue("email"),
+        state: getvalue("state"),
+        password: getvalue("password")
     }
 
-    alert("Your Flight Booking Successfully || ")
+    alert("Sign-Up Successfully || ")
     window.location.href ="/Final-Project/"
 
 }
 
 
-document.getElementById("form").addEventListener("submit", flightData)
+document.getElementById("form").addEventListener("submit", handleData)
+
 
 document.getElementById("navbar").innerHTML = navbar()

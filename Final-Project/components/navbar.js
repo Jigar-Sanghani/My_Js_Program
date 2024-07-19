@@ -28,6 +28,12 @@ const navbar = () => {
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/Final-Project/html/hotel.html">Hotels</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/Final-Project/html/signup.html">Sign-Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/Final-Project/html/login.html">Log-In</a>
+                    </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
