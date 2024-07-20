@@ -3,8 +3,8 @@ import navbar from "../components/navbar.js";
 let data_1 = [
     {
         id: "1",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Volvo",
+        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7FihFnL3fXD3o0UNQLwQXnet4SjYKqdGa-w&s",
+        company_name: "MAO HAPA SF EXP",
         number : "6E8761",
         s_time: "06:00",
         e_time: "10:00",
@@ -13,8 +13,8 @@ let data_1 = [
     },
     {
         id: "2",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Volvo-Sleeper",
+        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7FihFnL3fXD3o0UNQLwQXnet4SjYKqdGa-w&s",
+        company_name: "LOKSHAKTI EXP",
         number : "06B745",
         s_time: "09:00",
         e_time: "13:00",
@@ -23,8 +23,8 @@ let data_1 = [
     },
     {
         id: "3",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Ac",
+        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7FihFnL3fXD3o0UNQLwQXnet4SjYKqdGa-w&s",
+        company_name: "ARAVALI EXP",
         number : "12K960",
         s_time: "12:00",
         e_time: "16:00",
@@ -32,8 +32,8 @@ let data_1 = [
     },
    {
         id: "4",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Ac-Sleeper",
+        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7FihFnL3fXD3o0UNQLwQXnet4SjYKqdGa-w&s",
+        company_name: "AJMER EXPRESS",
         number : "07K647",
         s_time: "15:00",
         e_time: "19:00",
@@ -42,8 +42,8 @@ let data_1 = [
     },
     {
         id: "5",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Express",
+        company_logo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7FihFnL3fXD3o0UNQLwQXnet4SjYKqdGa-w&s",
+        company_name: "GUJRAT MAIL",
         number : "94657P",
         s_time: "18:00",
         e_time: "22:00",
@@ -52,8 +52,8 @@ let data_1 = [
     },
     {
         id: "6",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Sleeper",
+        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7FihFnL3fXD3o0UNQLwQXnet4SjYKqdGa-w&s",
+        company_name: "KCVL BVC EXPRES",
         number : "127H51",
         s_time: "21:00",
         e_time: "25:00",
@@ -62,8 +62,8 @@ let data_1 = [
     },
     {
         id: "7",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Emirates",
+        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7FihFnL3fXD3o0UNQLwQXnet4SjYKqdGa-w&s",
+        company_name: "BDTS BGKT EXP",
         number : "6E8761",
         s_time: "00:00",
         e_time: "04:00",
@@ -72,8 +72,8 @@ let data_1 = [
     },
     {
         id: "8",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Gurjarnagri",
+        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7FihFnL3fXD3o0UNQLwQXnet4SjYKqdGa-w&s",
+        company_name: "GUJARAT QUEEN",
         number : "45X785",
         s_time: "03:00",
         e_time: "07:008",

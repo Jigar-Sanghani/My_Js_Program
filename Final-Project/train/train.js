@@ -17,7 +17,7 @@ const trainData = (e) => {
     }
 
     alert("Your Train Booking Successfully || ")
-    window.location.href ="/Final-Project/"
+    window.location.href = "/Final-Project/train/train_book.html"
 
 }
 

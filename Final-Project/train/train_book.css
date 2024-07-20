@@ -55,15 +55,14 @@
 }
 
 .companylogo{
-    height: 75px;
-    width: 75px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
 }
 
 .companyname{
     font-size: 30px;
 }
-
 
 .btn1{
     background-color: #EB5B25;

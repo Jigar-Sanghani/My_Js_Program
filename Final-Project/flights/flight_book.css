@@ -60,6 +60,11 @@
     border-radius: 50%;
 }
 
+.companyname{
+    font-size: 30px;
+}
+
+
 .btn1{
     background-color: #EB5B25;
     color: white;

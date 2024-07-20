@@ -17,7 +17,7 @@ const hotelData = (e) => {
     }
 
     alert("Your Hotel Booking Successfully || ")
-    window.location.href ="/Final-Project/"
+    window.location.href ="/Final-Project/hotels/hotel_book.html"
 
 }
 
