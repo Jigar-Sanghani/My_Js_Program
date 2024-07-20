@@ -100,6 +100,9 @@ const mapper = (data) => {
         let button = document.createElement("button");
         button.innerHTML = "Book";
         button.classList.add("btn1");
+        button.addEventListener("click",()=>{
+            window.location.href = ""
+        })
 
         let div = document.createElement("div");
         div.append(companylogo,companyname,stime,etime,cost,button);

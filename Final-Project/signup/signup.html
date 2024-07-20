@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log-In</title>
+    <title>Sign-Up</title>
 
     <!-- Css Link -->
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="./signup.css">
 
     <!-- Favicon Link -->
     <link rel="shortcut icon"
@@ -33,10 +33,12 @@
     <div class="container-fluid img-fluid">
         <div id="navbar">
         </div>
-        <div class="login">
-            <h1>------- Log In -------</h1>
+        <div class="signup">
+            <h1>------- Sign Up -------</h1>
             <form id="form">
+                <input type="text" placeholder="Enter The Name" id="name" required> <br><br>
                 <input type="email" placeholder="Enter The Email" id="email" required><br><br>
+                <input type="text" placeholder="Enter Your State " id="state" required><br><br>
                 <input type="password" placeholder="Enter The Password" id="password" required><br><br>
                 <input type="submit" id="submit">
             </form>
@@ -46,6 +48,6 @@
 </body>
 
 <!-- JS Link -->
-<script type="module" src="../js/login.js"></script>
+<script type="module" src="./signup.js"></script>
 
 </html>
