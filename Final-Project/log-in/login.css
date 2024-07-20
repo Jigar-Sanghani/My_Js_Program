@@ -14,9 +14,15 @@ body {
 .navbar {
     background-color: #EB5B25;
 
+
     a {
         color: #FFFFFF !important;
         font-size: 18px;
+        transition: all 0.5s;
+    }
+
+    a:hover {
+        transform: scale(1.1);
     }
 
     img {

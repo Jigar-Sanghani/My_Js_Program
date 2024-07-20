@@ -17,7 +17,7 @@ const busData = (e) => {
     }
 
     alert("Your Bus Booking Successfully || ")
-    window.location.href ="/Final-Project/"
+    window.location.href ="/Final-Project/bus/bus_book.html"
 
 }
 

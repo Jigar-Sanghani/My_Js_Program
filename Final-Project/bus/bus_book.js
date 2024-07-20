@@ -3,81 +3,81 @@ import navbar from "../components/navbar.js";
 let data_1 = [
     {
         id: "1",
-        company_logo: "https://1000logos.net/wp-content/uploads/2021/07/IndiGo-Logo.jpg",
-        company_name: "Indigo",
+        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
+        company_name: "Volvo",
         number : "6E8761",
         s_time: "06:00",
         e_time: "10:00",
-        cost: "₹ 4,500"
+        cost: "₹ 450"
 
     },
     {
         id: "2",
-        company_logo: "https://images.hindustantimes.com/rf/image_size_640x362/HT/p1/2014/08/11/Incoming/Pictures/1250711_Wallpaper2.jpg",
-        company_name: "Vistara",
-        number : "9K92460",
+        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
+        company_name: "Volvo-Sleeper",
+        number : "06B745",
         s_time: "09:00",
         e_time: "13:00",
-        cost: "₹ 7,500"
+        cost: "₹ 750"
 
     },
     {
         id: "3",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ3Gq_woK4rbx6iyGpcNLtyaO4ks5dmUjDpw&s",
-        company_name: "Aksara Air",
-        number : "2U7593",
+        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
+        company_name: "Ac",
+        number : "12K960",
         s_time: "12:00",
         e_time: "16:00",
-        cost: "₹ 10,500"
+        cost: "₹ 435"
     },
    {
         id: "4",
-        company_logo: "https://uxdt.nic.in/wp-content/uploads/2020/06/Preview-2.png?x38773",
-        company_name: "Air India",
-        number : "6W0958",
+        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
+        company_name: "Ac-Sleeper",
+        number : "07K647",
         s_time: "15:00",
         e_time: "19:00",
-        cost: "₹ 2,500"
+        cost: "₹ 250"
 
     },
     {
         id: "5",
-        company_logo: "https://1000logos.net/wp-content/uploads/2021/07/IndiGo-Logo.jpg",
-        company_name: "Indigo",
-        number : "0U7206",
+        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
+        company_name: "Express",
+        number : "94657P",
         s_time: "18:00",
         e_time: "22:00",
-        cost: "₹ 5,500"
+        cost: "₹ 550"
 
     },
     {
         id: "6",
-        company_logo: "https://uxdt.nic.in/wp-content/uploads/2020/06/Preview-2.png?x38773",
-        company_name: "Air India",
-        number : "12K975",
+        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
+        company_name: "Sleeper",
+        number : "127H51",
         s_time: "21:00",
         e_time: "25:00",
-        cost: "₹ 3,500"
+        cost: "₹ 350"
 
     },
     {
         id: "7",
-        company_logo: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg",
+        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
         company_name: "Emirates",
-        number : "0Z8765",
+        number : "6E8761",
         s_time: "00:00",
         e_time: "04:00",
-        cost: "₹ 6,500"
+        cost: "₹ 450"
 
     },
     {
         id: "8",
-        company_logo: "https://logos-world.net/wp-content/uploads/2020/03/Qatar-Airways-Logo-2006-present.jpg",
-        company_name: "Qutar",
-        number : "7B9361",
+        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
+        company_name: "Gurjarnagri",
+        number : "45X785",
         s_time: "03:00",
         e_time: "07:008",
-        cost: "₹ 9,500"
+        cost: "₹ 500"
 
     },
 ]
@@ -90,8 +90,8 @@ const mapper = (data) => {
         companylogo.classList.add("img-fluid", "companylogo");
 
         let companyname = document.createElement("h1");
-        companyname.innerHTML = ele.company_name;
-        companyname.classList.add("comanyname");
+        companyname.innerHTML = `Type : ${ele.company_name}`;
+        companyname.classList.add("companyname");
 
         let number = document.createElement("p");
         number.innerHTML = `Number : ${ele.number}`;
@@ -117,7 +117,7 @@ const mapper = (data) => {
         })
 
         let div = document.createElement("div");
-        div.append(companylogo,companyname,number,stime,etime,cost,button);
+        div.append(companyname,number,stime,etime,cost,button);
         div.classList.add("div");
 
         document.getElementById("scheduled").append(div);
