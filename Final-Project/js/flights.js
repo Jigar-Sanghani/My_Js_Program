@@ -17,7 +17,7 @@ const flightData = (e) => {
     }
 
     alert("Your Flight Booking Successfully || ")
-    window.location.href ="/Final-Project/"
+    window.location.href ="/Final-Project/html/new.html"
 
 }
 
