@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code-Editor</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div class="leftPart">
+        <div class="content">
+            <label>
+                HTML
+                <div class="nav-buttons">
+                    <span class="minimize"><i class="fa-solid fa-window-minimize"></i></span>
+                    <span class="maximize"><i class="fa-solid fa-window-maximize"></i></span>
+                    <span class="close"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+            </label>
+            <textarea></textarea>
+        </div>
+        <div class="content">
+            <label>
+                CSS
+                <div class="nav-buttons">
+                    <span class="minimize"><i class="fa-solid fa-window-minimize"></i></span>
+                    <span class="maximize"><i class="fa-solid fa-window-maximize"></i></span>
+                    <span class="close"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+            </label>
+            <textarea></textarea>
+        </div>
+        <div class="content">
+            <label>
+                JS
+                <div class="nav-buttons">
+                    <span class="minimize"><i class="fa-solid fa-window-minimize"></i></span>
+                    <span class="maximize"><i class="fa-solid fa-window-maximize"></i></span>
+                    <span class="close"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+            </label>
+            <textarea></textarea>
+        </div>
+    </div>
+    <div class="rightPart">
+        <label>
+            Output
+            <div class="nav-buttons">
+                <span class="minimize"><i class="fa-solid fa-window-minimize"></i></span>
+                <span class="maximize"><i class="fa-solid fa-window-maximize"></i></span>
+                <span class="close"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+        </label>
+        <iframe class="iframe" id="output"></iframe>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
