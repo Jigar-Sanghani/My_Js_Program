@@ -6,7 +6,7 @@ export const DeleteUser = async (id) => {
 }
 
 
-const isExists = async (email) => {
+const isExist = async (email) => {
     let req = await fetch(`https://json-server-2-e6hf.onrender.com/user_final?email=${email}`);
     let res = await req.json()
 
@@ -22,11 +22,8 @@ const isExists = async (email) => {
 // create a new user
 export const createUser = async (user) => {
 
-    let isExists = await isExists(user.email);
+    let isExists = await isExist(user.email);
     if (isExists) {
-        alert("User Already Exists || ");
-    }
-    else {
         await fetch("https://json-server-2-e6hf.onrender.com/user_final", {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -40,6 +37,13 @@ export const createUser = async (user) => {
             .catch((err) => {
                 console.log(err);
             })
+
+        alert("Sign-Up Successfully ||");
+        window.location.href = "/Final-Project/"
+    }
+    else {
+        alert("User Already Exists || ");
+        window.location.href = "/Final-Project/log-in/login.html"
     }
 
 }
@@ -59,10 +63,12 @@ export const login = async (user) => {
 
     if (res.length == 0) {
         alert("User not found");
+        window.location.href = "/Final-Project/signup/signup.html"
     }
     else {
         if (res[0].password == user.password) {
             alert("Logged In Successfully || ");
+            window.location.href = "/Final-Project/"
         }
         else {
             alert("Password Is Incorrect || ");
@@ -73,8 +79,8 @@ export const login = async (user) => {
 
 // update patch
 
-export const updateUser=async(id ,data)=>{
-  let req=await  fetch(`https://json-server-2-e6hf.onrender.com/user_final/${id}`, {
+export const updateUser = async (id, data) => {
+    let req = await fetch(`https://json-server-2-e6hf.onrender.com/user_final/${id}`, {
         method: "PATCH",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(data)

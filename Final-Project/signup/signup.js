@@ -16,9 +16,8 @@ const handleData = (e) => {
         password: getvalue("password")
     }
 
-    alert("Sign-Up Successfully || ")
-    createUser(user)
-    window.location.href ="/Final-Project/"
+    createUser(user);
+    localStorage.setItem("isLogin", true)
 
 }
 

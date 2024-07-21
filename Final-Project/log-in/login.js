@@ -1,5 +1,12 @@
 import navbar from "../components/navbar.js";
 import getvalue from "../components/getvalue.js";
+import { login } from "../components/api.js";
+
+
+let isLogin = localStorage.getItem("isLogin") || false;
+if (!isLogin) {
+    window.location.href = "/Final-Project/signup/signup.html"
+}
 
 document.addEventListener("contextmenu", (e) => {
     e.preventDefault();
@@ -14,27 +21,10 @@ const handleData = (e) => {
         password: getvalue("password")
     }
 
-    alert("Log-In Successfully || ")
-    window.location.href ="/Final-Project/"
+    login(user);
+    
+    localStorage.setItem("isLogin", true)
 
-    // if (userdetails) {
-
-    //     if (userdetails.email != user.email) {
-    //         alert("User Not Found  ||" + user.email);
-    //     }
-    //     else if (userdetails.password != user.password) {
-    //         alert("Password Mismatch ||" + user.password);
-    //     }
-    //     else {
-    //         alert("Log-in Successfully || " + user.email);
-    //         window.location.href = "/Final-Project/"
-    //         localStorage.setItem("isLogin", true)
-    //     }
-    // }
-    // else {
-    //     alert("Please Sign Up !!")
-    //     window.location.href = "/Final-Project/html/signup.html"
-    // }
 }
 
 
