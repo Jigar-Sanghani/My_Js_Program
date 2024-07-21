@@ -16,6 +16,8 @@ const busData = (e) => {
         seat : getvalue("seat")
     }
 
+    localStorage.setItem("Bus-Menu", JSON.stringify(user))
+
     alert("Your Bus Booking Successfully || ")
     window.location.href ="/Final-Project/bus/bus_book.html"
 

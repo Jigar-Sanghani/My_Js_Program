@@ -6,6 +6,7 @@ document.addEventListener("contextmenu", (e) => {
     alert("Right Click Is Disabled ||");
 })
 
+
 const flightData = (e) => {
     e.preventDefault();
     let user = {
@@ -15,6 +16,8 @@ const flightData = (e) => {
         return: getvalue("return"),
         seat : getvalue("seat")
     }
+
+    localStorage.setItem("Flight-Menu", JSON.stringify(user))
 
     alert("Your Flight Booking Successfully || ")
     window.location.href ="/Final-Project/flights/flight_book.html"

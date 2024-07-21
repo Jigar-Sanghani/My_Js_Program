@@ -15,6 +15,8 @@ const trainData = (e) => {
         return: getvalue("return"),
         seat : getvalue("seat")
     }
+    
+    localStorage.setItem("Train-Menu", JSON.stringify(user))
 
     alert("Your Train Booking Successfully || ")
     window.location.href = "/Final-Project/train/train_book.html"

@@ -1,13 +1,13 @@
 //  Delete User
 export const DeleteUser = async (id) => {
-    let req = await fetch(`https://json-server-4-tqur.onrender.com/user_final/${id}`, {
+    let req = await fetch(`https://json-server-2-e6hf.onrender.com/user_final/${id}`, {
         method: "DELETE",
     })
 }
 
 
 const isExists = async (email) => {
-    let req = await fetch(`https://json-server-4-tqur.onrender.com/user_final?email=${email}`);
+    let req = await fetch(`https://json-server-2-e6hf.onrender.com/user_final?email=${email}`);
     let res = await req.json()
 
     if (res.length == 0) {
@@ -27,7 +27,7 @@ export const createUser = async (user) => {
         alert("User Already Exists || ");
     }
     else {
-        await fetch("https://json-server-4-tqur.onrender.com/user_final", {
+        await fetch("https://json-server-2-e6hf.onrender.com/user_final", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(user)
@@ -47,14 +47,14 @@ export const createUser = async (user) => {
 // get user
 export const getUser = async () => {
 
-    let req = await fetch("https://json-server-4-tqur.onrender.com/user_final");
+    let req = await fetch("https://json-server-2-e6hf.onrender.com/user_final");
     let res = await req.json()
     return res
 }
 
 // login user
 export const login = async (user) => {
-    let req = await fetch(`https://json-server-4-tqur.onrender.com/user_final?email=${user.email}`);
+    let req = await fetch(`https://json-server-2-e6hf.onrender.com/user_final?email=${user.email}`);
     let res = await req.json()
 
     if (res.length == 0) {
@@ -74,7 +74,7 @@ export const login = async (user) => {
 // update patch
 
 export const updateUser=async(id ,data)=>{
-  let req=await  fetch(`https://json-server-4-tqur.onrender.com/user_final/${id}`, {
+  let req=await  fetch(`https://json-server-2-e6hf.onrender.com/user_final/${id}`, {
         method: "PATCH",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(data)

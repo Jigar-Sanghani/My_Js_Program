@@ -8,6 +8,7 @@ body {
 
     background-image: url("https://t3.ftcdn.net/jpg/01/22/71/96/360_F_122719641_V0yw2cAOrfxsON3HeWi2Sf4iVxhv27QO.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -40,7 +41,7 @@ body {
     border-radius: 05px;
     text-align: center;
     font-size: 20px;
-    margin: 10%;
+    margin:05% 20%;
     backdrop-filter: blur(30px);
     background-color: transparent;
 
@@ -77,7 +78,7 @@ body {
         border: 0px;
         background-color: rgba(140, 156, 156, 0.733);
         transition: all 0.5s;
-        margin-bottom: 20px;
+        margin-bottom: 02%;
         cursor: pointer;
     }
 

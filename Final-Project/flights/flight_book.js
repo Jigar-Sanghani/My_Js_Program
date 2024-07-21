@@ -1,89 +1,39 @@
 import navbar from "../components/navbar.js";
 
-let data_1 = [
-    {
-        id: "1",
-        company_logo: "https://1000logos.net/wp-content/uploads/2021/07/IndiGo-Logo.jpg",
-        company_name: "Indigo",
-        number : "6E8761",
-        s_time: "06:00",
-        e_time: "10:00",
-        cost: "₹ 4,500"
+const API = async () => {
+    let request = await fetch('https://json-server-2-e6hf.onrender.com/flight_scheduled');
+    let response = await request.json();
+    return response;
+}
 
-    },
-    {
-        id: "2",
-        company_logo: "https://images.hindustantimes.com/rf/image_size_640x362/HT/p1/2014/08/11/Incoming/Pictures/1250711_Wallpaper2.jpg",
-        company_name: "Vistara",
-        number : "9K92460",
-        s_time: "09:00",
-        e_time: "13:00",
-        cost: "₹ 7,500"
+let flight_menu = JSON.parse(localStorage.getItem("Flight-Menu")) || []
 
-    },
-    {
-        id: "3",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ3Gq_woK4rbx6iyGpcNLtyaO4ks5dmUjDpw&s",
-        company_name: "Aksara Air",
-        number : "2U7593",
-        s_time: "12:00",
-        e_time: "16:00",
-        cost: "₹ 10,500"
-    },
-   {
-        id: "4",
-        company_logo: "https://uxdt.nic.in/wp-content/uploads/2020/06/Preview-2.png?x38773",
-        company_name: "Air India",
-        number : "6W0958",
-        s_time: "15:00",
-        e_time: "19:00",
-        cost: "₹ 2,500"
+const handlebooking = async (index, ele) => {
 
-    },
-    {
-        id: "5",
-        company_logo: "https://1000logos.net/wp-content/uploads/2021/07/IndiGo-Logo.jpg",
-        company_name: "Indigo",
-        number : "0U7206",
-        s_time: "18:00",
-        e_time: "22:00",
-        cost: "₹ 5,500"
+    const seat = flight_menu.seat;
+    const cost = ele.cost;
+    const total = cost * seat;
 
-    },
-    {
-        id: "6",
-        company_logo: "https://uxdt.nic.in/wp-content/uploads/2020/06/Preview-2.png?x38773",
-        company_name: "Air India",
-        number : "12K975",
-        s_time: "21:00",
-        e_time: "25:00",
-        cost: "₹ 3,500"
+    alert(`----- You Have Booked Flight Tickets With -----
+        Flight Name :  ${ele.company_name}
+        Flight Number :  ${ele.number} 
+        From : ${flight_menu.from}
+        To : ${flight_menu.to}
+        Date : ${flight_menu.departure}
+        Seat : ${flight_menu.seat}
+        ${flight_menu.from} :  ${ele.s_time} 
+        ${flight_menu.to} : ${ele.e_time}
+        Cost : ${ele.cost}
+        Total Cost : ${total}`);
 
-    },
-    {
-        id: "7",
-        company_logo: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg",
-        company_name: "Emirates",
-        number : "0Z8765",
-        s_time: "00:00",
-        e_time: "04:00",
-        cost: "₹ 6,500"
 
-    },
-    {
-        id: "8",
-        company_logo: "https://logos-world.net/wp-content/uploads/2020/03/Qatar-Airways-Logo-2006-present.jpg",
-        company_name: "Qutar",
-        number : "7B9361",
-        s_time: "03:00",
-        e_time: "07:008",
-        cost: "₹ 9,500"
+}
 
-    },
-]
+const mapper = async () => {
 
-const mapper = (data) => {
-    data.map((ele) => {
+    let data = await API();
+
+    data.map((ele, index) => {
 
         let companylogo = document.createElement("img");
         companylogo.src = ele.company_logo;
@@ -112,25 +62,22 @@ const mapper = (data) => {
         let button = document.createElement("button");
         button.innerHTML = "Book";
         button.classList.add("btn1");
-        button.addEventListener("click",()=>{
-            window.location.href = ""
-        })
+        button.addEventListener("click", () => handlebooking(index, ele))
 
         let div = document.createElement("div");
-        div.append(companylogo,companyname,number,stime,etime,cost,button);
+        div.append(companylogo, companyname, number, stime, etime, cost, button);
         div.classList.add("div");
 
         document.getElementById("scheduled").append(div);
     })
 };
 
-mapper(data_1);
+mapper();
 
 document.addEventListener("contextmenu", (e) => {
     e.preventDefault();
     alert("Right Click Is Disabled ||");
 })
 
-console.log(data_1);
 
 document.getElementById("navbar").innerHTML = navbar();

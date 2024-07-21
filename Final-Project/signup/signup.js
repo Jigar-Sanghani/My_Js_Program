@@ -1,5 +1,6 @@
 import navbar from "../components/navbar.js";
 import getvalue from "../components/getvalue.js";
+import { createUser } from "../components/api.js";
 
 document.addEventListener("contextmenu", (e) => {
     e.preventDefault();
@@ -16,6 +17,7 @@ const handleData = (e) => {
     }
 
     alert("Sign-Up Successfully || ")
+    createUser(user)
     window.location.href ="/Final-Project/"
 
 }

@@ -1,89 +1,36 @@
 import navbar from "../components/navbar.js";
 
-let data_1 = [
-    {
-        id: "1",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Volvo",
-        number : "6E8761",
-        s_time: "06:00",
-        e_time: "10:00",
-        cost: "₹ 450"
+const API = async () => {
+    let request = await fetch('https://json-server-2-e6hf.onrender.com/bus_scheduled');
+    let response = await request.json();
+    return response;
+}
 
-    },
-    {
-        id: "2",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Volvo-Sleeper",
-        number : "06B745",
-        s_time: "09:00",
-        e_time: "13:00",
-        cost: "₹ 750"
+let Bus_Menu = JSON.parse(localStorage.getItem("Bus-Menu")) || []
 
-    },
-    {
-        id: "3",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Ac",
-        number : "12K960",
-        s_time: "12:00",
-        e_time: "16:00",
-        cost: "₹ 435"
-    },
-   {
-        id: "4",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Ac-Sleeper",
-        number : "07K647",
-        s_time: "15:00",
-        e_time: "19:00",
-        cost: "₹ 250"
+const handlebooking = async (index, ele) => {
+    const seat = Bus_Menu.seat;
+    const cost = ele.cost;
+    const total = cost * seat;
 
-    },
-    {
-        id: "5",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Express",
-        number : "94657P",
-        s_time: "18:00",
-        e_time: "22:00",
-        cost: "₹ 550"
+    alert(`----- You Have Booked Bus Tickets With -----
+        Bus Type :  ${ele.company_name}
+        Bus Number :  ${ele.number} 
+        From : ${Bus_Menu.from}
+        To : ${Bus_Menu.to}
+        Date : ${Bus_Menu.departure}
+        Seat : ${Bus_Menu.seat}
+        ${Bus_Menu.from} :  ${ele.s_time} 
+        ${Bus_Menu.to} : ${ele.e_time}
+        Cost : ${ele.cost}
+        Total Cost : ${total}`);
+}
 
-    },
-    {
-        id: "6",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Sleeper",
-        number : "127H51",
-        s_time: "21:00",
-        e_time: "25:00",
-        cost: "₹ 350"
+const mapper = async () => {
 
-    },
-    {
-        id: "7",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Emirates",
-        number : "6E8761",
-        s_time: "00:00",
-        e_time: "04:00",
-        cost: "₹ 450"
+    let data = await API();
 
-    },
-    {
-        id: "8",
-        company_logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPPNada_8XIbmBarO_1FnTgNfteouiz6c9g&s",
-        company_name: "Gurjarnagri",
-        number : "45X785",
-        s_time: "03:00",
-        e_time: "07:008",
-        cost: "₹ 500"
-
-    },
-]
-
-const mapper = (data) => {
-    data.map((ele) => {
+    data.map((ele,index) => {
 
         let companylogo = document.createElement("img");
         companylogo.src = ele.company_logo;
@@ -112,9 +59,7 @@ const mapper = (data) => {
         let button = document.createElement("button");
         button.innerHTML = "Book";
         button.classList.add("btn1");
-        button.addEventListener("click",()=>{
-            window.location.href = ""
-        })
+        button.addEventListener("click", () => handlebooking(index, ele))
 
         let div = document.createElement("div");
         div.append(companyname,number,stime,etime,cost,button);
@@ -124,13 +69,12 @@ const mapper = (data) => {
     })
 };
 
-mapper(data_1);
+mapper();
 
 document.addEventListener("contextmenu", (e) => {
     e.preventDefault();
     alert("Right Click Is Disabled ||");
 })
 
-console.log(data_1);
 
 document.getElementById("navbar").innerHTML = navbar();
