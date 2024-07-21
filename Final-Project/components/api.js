@@ -72,6 +72,7 @@ export const login = async (user) => {
         }
         else {
             alert("Password Is Incorrect || ");
+            window.location.href = "https://www.google.com/"
         }
     }
 }

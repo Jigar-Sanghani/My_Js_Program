@@ -3,8 +3,8 @@ import getvalue from "../components/getvalue.js";
 import { login } from "../components/api.js";
 
 
-let isLogin = localStorage.getItem("isLogin") || false;
-if (!isLogin) {
+let islogin = localStorage.getItem("islogin") || false;
+if (!islogin) {
     window.location.href = "/Final-Project/signup/signup.html"
 }
 
@@ -23,7 +23,7 @@ const handleData = (e) => {
 
     login(user);
     
-    localStorage.setItem("isLogin", true)
+    localStorage.setItem("islogin", true)
 
 }
 

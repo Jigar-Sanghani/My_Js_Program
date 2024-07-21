@@ -6,11 +6,10 @@ document.addEventListener("contextmenu", (e) => {
     alert("Right Click Is Disabled ||");
 })
 
-let isLogin = localStorage.getItem("isLogin") || false;
-if (!isLogin) {
+let islogin = localStorage.getItem("islogin") || false;
+if (!islogin) {
     window.location.href = "/Final-Project/signup/signup.html"
 }
-
 const hotelData = (e) => {
     e.preventDefault();
     let user = {

@@ -17,7 +17,7 @@ const handleData = (e) => {
     }
 
     createUser(user);
-    localStorage.setItem("isLogin", true)
+    localStorage.setItem("islogin", true)
 
 }
 
