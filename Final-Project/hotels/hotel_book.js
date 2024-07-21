@@ -9,24 +9,6 @@ const API = async () => {
 
 let Hotel_menu = JSON.parse(localStorage.getItem("Hotel-Menu")) || []
 
-const handlebooking = async (index, ele) => {
-
-    const seat = Hotel_menu.room;
-    const cost = ele.cost;
-    const total = cost * seat;
-
-    alert(`----- You Have Booked Hotel Rooms With -----
-
-    Your Name :  ${Hotel_menu.name}
-    City :  ${Hotel_menu.city} 
-    Check-In : ${Hotel_menu.check_in}
-    Check-Out : ${Hotel_menu.check_out}
-    Rooms : ${Hotel_menu.room}
-    Cost : ${ele.cost}
-    Total Cost : ${total}
-    Description : ${ele.description}`);
-}
-
 const Mapper = async () => {
 
     let data = await API();
@@ -49,7 +31,11 @@ const Mapper = async () => {
         btn1.addEventListener("click", () => { likehandle(index) })
         let btn2 = document.createElement("button")
         btn2.innerHTML = "Book"
-        btn2.addEventListener("click", () => handlebooking(index, ele))
+        btn2.addEventListener("click", () => {
+            localStorage.setItem("Book-Hotel", JSON.stringify(ele));
+            alert("Ticket Book After A Payment ||")
+            window.location.href = "/Final-Project/hotels/new.html"
+        })
         btn_parent.append(btn1, btn2)
         let cost = document.createElement("h4")
         cost.innerHTML = `Cost : ${ele.cost}`

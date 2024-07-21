@@ -1,0 +1,85 @@
+    
+    .navbar {
+        background-color: #EB5B25;
+    
+    
+        a {
+            color: #FFFFFF !important;
+            font-size: 18px;
+            transition: all 0.5s;
+        }
+    
+        a:hover {
+            transform: scale(1.1);
+        }
+    
+        img {
+            border-radius: 50%;
+        }
+    
+        button {
+            color: #EB5B25;
+            background-color: #FFFFFF;
+        }
+    }
+    
+    #main_list {
+        width: 100%;
+        height: auto;
+        margin-top: 02%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #product {
+        margin: 05%;
+        width: 40%;
+        height: auto;
+        border: 02px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 02%;
+        padding-bottom: 02%;
+
+        p {
+
+            font-size: 18px;
+        }
+    }
+
+    #logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+
+        img {
+            height: 70px;
+            width: 100px;
+        }
+    }
+
+    #image {
+        height: 70px;
+        width: 100px;
+    }
+
+    #submit{
+        margin-top: 02%;
+        height: 40px;
+        width: 130px;
+        border: 0px;
+        border-radius: 10px;
+        background-color: rgba(140, 156, 156, 0.733);
+        transition: all 0.5s;
+    }
+
+    #submit:hover{
+        transform: scale(1.05);
+    }

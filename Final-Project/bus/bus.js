@@ -22,7 +22,7 @@ const busData = (e) => {
 
     localStorage.setItem("Bus-Menu", JSON.stringify(user))
 
-    alert("Your Bus Booking Successfully || ")
+    alert("Your Bus Tickets In Process || ")
     window.location.href ="/Final-Project/bus/bus_book.html"
 
 }

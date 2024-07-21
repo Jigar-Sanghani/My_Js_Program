@@ -6,29 +6,6 @@ const API = async () => {
     return response;
 }
 
-let flight_menu = JSON.parse(localStorage.getItem("Flight-Menu")) || []
-
-const handlebooking = async (index, ele) => {
-
-    const seat = flight_menu.seat;
-    const cost = ele.cost;
-    const total = cost * seat;
-
-    alert(`----- You Have Booked Flight Tickets With -----
-        Flight Name :  ${ele.company_name}
-        Flight Number :  ${ele.number} 
-        From : ${flight_menu.from}
-        To : ${flight_menu.to}
-        Date : ${flight_menu.departure}
-        Seat : ${flight_menu.seat}
-        ${flight_menu.from} :  ${ele.s_time} 
-        ${flight_menu.to} : ${ele.e_time}
-        Cost : ${ele.cost}
-        Total Cost : ${total}`);
-
-
-}
-
 const mapper = async () => {
 
     let data = await API();
@@ -62,7 +39,11 @@ const mapper = async () => {
         let button = document.createElement("button");
         button.innerHTML = "Book";
         button.classList.add("btn1");
-        button.addEventListener("click", () => handlebooking(index, ele))
+        button.addEventListener("click", () => {
+            localStorage.setItem("Book-Flight", JSON.stringify(ele));
+            alert("Ticket Book After A Payment ||")
+            window.location.href = "/Final-Project/flights/new.html"
+        })
 
         let div = document.createElement("div");
         div.append(companylogo, companyname, number, stime, etime, cost, button);

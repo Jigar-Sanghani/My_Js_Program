@@ -23,7 +23,7 @@ const flightData = (e) => {
 
     localStorage.setItem("Flight-Menu", JSON.stringify(user))
 
-    alert("Your Flight Booking Successfully || ")
+    alert("Your Flight Tickets In Process || ")
     window.location.href ="/Final-Project/flights/flight_book.html"
 
 }

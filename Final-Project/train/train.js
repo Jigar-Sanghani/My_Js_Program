@@ -22,7 +22,7 @@ const trainData = (e) => {
     
     localStorage.setItem("Train-Menu", JSON.stringify(user))
 
-    alert("Your Train Booking Successfully || ")
+    alert("Your Train Tickets In Process || ")
     window.location.href = "/Final-Project/train/train_book.html"
 
 }

@@ -21,7 +21,7 @@ const hotelData = (e) => {
     }
 
     localStorage.setItem("Hotel-Menu", JSON.stringify(user))
-    alert("Your Hotel Booking Successfully || ")
+    alert("Your Hotel Tickets In Process || ")
     window.location.href ="/Final-Project/hotels/hotel_book.html"
 
 }

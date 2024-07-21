@@ -6,25 +6,6 @@ const API = async () => {
     return response;
 }
 
-let Train_Menu = JSON.parse(localStorage.getItem("Train-Menu")) || []
-
-const handlebooking = async (index, ele) => {
-    const seat = Train_Menu.seat;
-    const cost = ele.cost;
-    const total = cost * seat;
-
-    alert(`----- You Have Booked Bus Tickets With -----
-        Bus Type :  ${ele.company_name}
-        Bus Number :  ${ele.number} 
-        From : ${Train_Menu.from}
-        To : ${Train_Menu.to}
-        Date : ${Train_Menu.departure}
-        Seat : ${Train_Menu.seat}
-        ${Train_Menu.from} :  ${ele.s_time} 
-        ${Train_Menu.to} : ${ele.e_time}
-        Cost : ${ele.cost}
-        Total Cost : ${total}`);
-}
 
 const mapper =async() => {
 
@@ -59,10 +40,14 @@ const mapper =async() => {
         let button = document.createElement("button");
         button.innerHTML = "Book";
         button.classList.add("btn1");
-        button.addEventListener("click", () => handlebooking(index, ele))
+        button.addEventListener("click", () => {
+            localStorage.setItem("Book-Train", JSON.stringify(ele));
+            alert("Ticket Book After A Payment ||")
+            window.location.href = "/Final-Project/train/new.html"
+        })
 
         let div = document.createElement("div");
-        div.append(companyname,number,stime,etime,cost,button);
+        div.append(companylogo,companyname,number,stime,etime,cost,button);
         div.classList.add("div");
 
         document.getElementById("scheduled").append(div);
