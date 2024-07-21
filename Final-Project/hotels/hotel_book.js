@@ -33,7 +33,7 @@ const Mapper = async () => {
         btn2.innerHTML = "Book"
         btn2.addEventListener("click", () => {
             localStorage.setItem("Book-Hotel", JSON.stringify(ele));
-            alert("Ticket Book After A Payment ||")
+            alert("Rooms Book After A Payment ||")
             window.location.href = "/Final-Project/hotels/new.html"
         })
         btn_parent.append(btn1, btn2)
