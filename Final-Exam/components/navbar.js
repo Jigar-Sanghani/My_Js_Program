@@ -26,14 +26,17 @@ const navbar = () => {
                         <a class="nav-link active" aria-current="page" href="/Final-Exam/html/signup.html">Sign-Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/Final-Exam/html/login.html">Log-In</a>
+                        <a class="nav-link active" aria-current="page"  href="/Final-Exam/html/login.html">Log-In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"  href="/Final-Exam/html/logout.html">Log-Out</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/Final-Exam/html/add.html">Add-Food</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" type="search"  id="Video_Search"  placeholder="Search"   aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>

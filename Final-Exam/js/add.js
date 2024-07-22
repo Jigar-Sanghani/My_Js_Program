@@ -1,11 +1,12 @@
 import navbar from "../components/navbar.js";
 import getvalue from "../components/getvalue.js";
+import { create } from "../components/api.js";
 
 
 
 let islogin = localStorage.getItem("islogin") || false;
 if (!islogin) {
-    window.location.href = "/Final-Project/signup/signup.html"
+    window.location.href = "/Final-Exam/html/signup.html"
 }
 
 document.getElementById("navbar").innerHTML = navbar()
@@ -23,11 +24,11 @@ const handleData = (e) => {
     let user = {
         name: getvalue("name"),
         image : getvalue("image"),
-        price: getvalue("price")
+        cost: getvalue("price"),
+        rating : getvalue("rating")
     }
-
+    create(user)
     alert("Add Food Successfully || ")
-
     window.location.href = "/Final-Exam/"
 }
 

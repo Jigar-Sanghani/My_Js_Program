@@ -30,6 +30,7 @@ const handleData = (e) => {
         id: products.length == 0 ? 1 : products[products.length - 1].id + 1
     }
     products.push(product);
+    console.log(products);
     localStorage.setItem("products", JSON.stringify(products))
     alert("Item Added Successfully !!")
 }

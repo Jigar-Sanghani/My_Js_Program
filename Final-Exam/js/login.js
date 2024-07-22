@@ -5,7 +5,7 @@ import { login } from "../components/api.js";
 
 let islogin = localStorage.getItem("islogin") || false;
 if (!islogin) {
-    window.location.href = "/Final-Project/signup/signup.html"
+    window.location.href = "/Final-Exam/html/signup.html"
 }
 
 document.addEventListener("contextmenu", (e) => {
@@ -22,7 +22,7 @@ const handleData = (e) => {
     }
     
     login(user);
-    localStorage.setItem("islogin", true)
+    localStorage.setItem("islogin", true)   
 
 }
 

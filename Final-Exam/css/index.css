@@ -22,6 +22,25 @@
     }
 }
 
+.title{
+    margin-top: 05%;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+
+    div {
+        margin: 01%;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 #foodlist {
     margin-top: 02%;
     margin-bottom: 02%;
@@ -31,15 +50,21 @@
 
 }
 
-#filters {
+#filters1 {
     display: flex;
     justify-content: center;
     margin-top: 02%;
+    width: 50%;
+    justify-content: space-around;
 
-    div {
-        margin: 01%;
-        font-size: 25px;
-    }
+}
+
+#filters2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 02%;
+    width: 50%;
+    justify-content: space-around;
 }
 
 .img-fluid {

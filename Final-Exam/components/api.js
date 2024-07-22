@@ -20,6 +20,15 @@ const isExist = async (email) => {
 
 }
 
+export const create = async (user) => {
+
+    let req = await fetch("https://json-server-4-tqur.onrender.com/food", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(user)
+    })
+}
+
 // create a new user
 export const createUser = async (user) => {
 

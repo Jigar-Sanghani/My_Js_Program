@@ -7,7 +7,7 @@ document.getElementById("footer").innerHTML = footer()
 
 let proudcts = JSON.parse(localStorage.getItem("products")) || []
 
-let cartList = JSON.parse(localStorage.getItem("cartList")) || []
+let cartList = JSON.parse(localStorage.getItem("cartList")) || []   
 
 
 let isLogin = localStorage.getItem("isLogin") || false;

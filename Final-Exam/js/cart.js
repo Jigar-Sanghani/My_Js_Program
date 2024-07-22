@@ -4,7 +4,7 @@ import navbar from "../components/navbar.js";
 
 let islogin = localStorage.getItem("islogin") || false;
 if (!islogin) {
-    window.location.href = "/Final-Project/signup/signup.html"
+    window.location.href = "/Final-Exam/html/signup.html"
 }
 
 document.getElementById("navbar").innerHTML = navbar()
