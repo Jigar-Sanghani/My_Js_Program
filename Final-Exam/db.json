@@ -1,0 +1,61 @@
+{
+    "user": [],
+    "food": [
+            {
+                "id": 1,
+                "title": "Vadapav",
+                "image": "https://www.shutterstock.com/image-photo/cheese-vada-pav-grated-wada-260nw-2041096790.jpg",
+                "comment": "",
+                "cost": 100
+            },
+            {
+                "id": 2,
+                "title": "Pavbhaji",
+                "image": "https://media.istockphoto.com/id/1155185428/photo/indian-spicy-food-paav-bhaji-or-pav-bhaji.jpg?s=612x612&w=0&k=20&c=AMT1hmTm1xhTT0KmGsGPRyU6cPe-HFJuvkOgiT0m3Jo=",
+                "comment": "",
+                "cost": 150
+            },
+            {
+                "id": 3,
+                "title": "Burger",
+                "image": "https://www.shutterstock.com/image-photo/classic-hamburger-stock-photo-isolated-600nw-2282033179.jpg",
+                "comment": "",
+                "cost": 120
+            },
+            {
+                "id": 4,
+                "title": "Pizza",
+                "image": "https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg",
+                "comment": "",
+                "cost": 100
+            },
+            {
+                "id": 5,
+                "title": "Hotdog",
+                "image": "https://www.shutterstock.com/image-photo/hot-dog-ketchup-yellow-mustard-260nw-1922473676.jpg",
+                "comment": "",
+                "cost": 200
+            },
+            {
+                "id": 6,
+                "title": "Samosa",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxnVgCV-6sbWMQ-OaALcEztviIakZJgzo5Jg&s",
+                "comment": "",
+                "cost": 150
+            },
+            {
+                "id": 7,
+                "title": "Sand-Wich",
+                "image": "https://static.toiimg.com/thumb/83740315.cms?width=1200&height=900",
+                "comment": "",
+                "cost": 150
+            },
+            {
+                "id": 8,
+                "title": "Menchurium",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxR1_LCBWnDJECZq7-d0Cr2JNY3Sm-Ga7BFA&s",
+                "comment": "",
+                "cost": 100
+            }
+        ]
+    }

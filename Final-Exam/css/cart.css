@@ -1,0 +1,52 @@
+.navbar {
+    background-color: #EB5B25;
+
+
+    a {
+        color: #FFFFFF !important;
+        font-size: 18px;
+        transition: all 0.5s;
+    }
+
+    a:hover {
+        transform: scale(1.1);
+    }
+
+    img {
+        border-radius: 50%;
+    }
+
+    button {
+        color: #EB5B25;
+        background-color: #FFFFFF;
+    }
+}
+
+#navbar {
+    margin-bottom: 02%;
+}
+
+#footer {
+    margin-top: 02%;
+}
+
+#all {
+    cursor: pointer;
+}
+
+#list img {
+    width: 100px;
+}
+
+th {
+    text-align: center;
+}
+
+#list {
+    text-align: center;
+}
+
+.image{
+    width: 200px;
+    height: 200px;
+}

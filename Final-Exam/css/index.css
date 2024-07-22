@@ -1,0 +1,96 @@
+.navbar {
+    background-color: #EB5B25;
+
+
+    a {
+        color: #FFFFFF !important;
+        font-size: 18px;
+        transition: all 0.5s;
+    }
+
+    a:hover {
+        transform: scale(1.1);
+    }
+
+    img {
+        border-radius: 50%;
+    }
+
+    button {
+        color: #EB5B25;
+        background-color: #FFFFFF;
+    }
+}
+
+#foodlist {
+    margin-top: 02%;
+    margin-bottom: 02%;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+#filters {
+    display: flex;
+    justify-content: center;
+    margin-top: 02%;
+
+    div {
+        margin: 01%;
+        font-size: 25px;
+    }
+}
+
+.img-fluid {
+    height: 50px;
+    width: 10000px !important;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin-top: 04% ;
+}
+
+.img-fluid:hover {
+    transform: scale(1.02) !important;
+}
+
+.cost {
+    margin-top: 02%;
+}
+
+.rating {
+    margin-top: 04% !important;
+}
+
+.city {
+    margin-top: 05%;
+}
+
+.div {
+    margin: 05% !important;
+    padding: 05% !important;
+    border: 01px solid black;
+    border-radius: 10px;
+}
+
+.cost{
+    margin-top: 04%;
+}
+
+
+.btn2 {
+    border: 0px;
+    border-radius: 05px;
+    font-size: 20px;
+    color: white;
+    padding: 02%;
+    background-color: black;
+    margin-bottom: 05% !important;
+    transition: all 0.5s;
+    margin-top: 04% !important;
+}
+
+.btn2:hover {
+    transform: scale(1.1) !important;
+}
