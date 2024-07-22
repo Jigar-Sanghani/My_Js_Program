@@ -12,11 +12,6 @@ const getLocation = () => {
     }
 }
 
-let islogin = localStorage.getItem("islogin") || false;
-if (!islogin) {
-    window.location.href = "/Final-Project/signup/signup.html"
-}
-
 window.addEventListener("load", getLocation);
 
 document.addEventListener("contextmenu", (e) => {

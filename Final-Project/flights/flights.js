@@ -8,6 +8,7 @@ document.addEventListener("contextmenu", (e) => {
 
 let islogin = localStorage.getItem("islogin") || false;
 if (!islogin) {
+    alert("Please Sign-Up First || ");
     window.location.href = "/Final-Project/signup/signup.html"
 }
 
