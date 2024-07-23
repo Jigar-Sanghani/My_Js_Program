@@ -1,0 +1,73 @@
+#course_List{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px;
+    margin-top: 02%;
+}
+
+.div{
+    border: 02px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image{
+    border-radius: 10px;
+    height: 200px !important;
+    margin: 02%;
+}
+
+.title{
+    text-align: center;
+    margin: 02%;
+}
+
+.category{
+    margin: 02%;
+}
+
+.price{
+    
+    margin: 02%;
+}
+
+.btn2{
+    
+    margin: 02%;
+    width: 100px;
+    height: 50px;
+    font-size: 18px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: rgba(140, 156, 156, 0.733);
+    transition: all 0.5s;
+}
+
+.btn2:hover {
+    transform: scale(1.08);
+}
+
+.description{
+    margin: 02%;
+    text-align: start;
+    font-size: 20px;
+}
+
+#filters1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 02%;
+    width: 50%;
+    justify-content: space-around;
+    
+    div {
+        margin: 01%;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
