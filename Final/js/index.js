@@ -102,8 +102,9 @@ const Mapper = (data) => {
                 window.location.href = "/Final/html/dashbord.html"
             }
             else {
-                alert("Dashbord Open Only User Sorry ||")
-                window.location.href = "/Final/"
+
+                Localdata.push({ ...ele, qty: 1 })
+                alert("This Product Added To The Cart !!")
             }
         })
 
