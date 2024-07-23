@@ -17,9 +17,10 @@ const handleData = (e) => {
         admin : getvalue("admin")
     }
 
-    console.log(user);
+    // console.log(user.admin);
     createUser(user);
     localStorage.setItem("is_login", true)
+    localStorage.setItem("user", JSON.stringify(user.admin))
 
 }
 

@@ -3,6 +3,8 @@
 export const DeleteUser = async (email) => {
     let req = await fetch(`https://json-server-1-4hf7.onrender.com/final-2user?email=${email}`, {
         method: "DELETE",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(user)
     })
 }
 
@@ -11,7 +13,7 @@ const isExist = async (email) => {
     let req = await fetch(`https://json-server-1-4hf7.onrender.com/final-2user?email=${email}`);
     let res = await req.json()
 
-    if (res.length == 0) {
+    if (res.length > 0) {
         return true
     }
     else {
@@ -34,6 +36,11 @@ export const createUser = async (user) => {
 
     let isExists = await isExist(user.email);
     if (isExists) {
+        alert("User Already Exists || ");
+        window.location.href = "/Final/html/login.html"
+    }
+    else {
+
         await fetch("https://json-server-1-4hf7.onrender.com/final-2user", {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -50,10 +57,6 @@ export const createUser = async (user) => {
 
         alert("Sign-Up Successfully ||");
         window.location.href = "/Final/"
-    }
-    else {
-        alert("User Already Exists || ");
-        window.location.href = "/Final/html/login.html"
     }
 
 }
@@ -78,6 +81,7 @@ export const login = async (user) => {
     else {
         if (res[0].password == user.password) {
             alert("Logged In Successfully || ");
+            localStorage.setItem("is_login", true)   
             window.location.href = "/Final/"
         }
         else {

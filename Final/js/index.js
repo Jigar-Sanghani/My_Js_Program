@@ -31,7 +31,7 @@ window.addEventListener("load", getLocation);
 
 
 const API = async () => {
-    let request = await fetch('https://json-server-2-e6hf.onrender.com/courses');
+    let request = await fetch('https://json-server-1-4hf7.onrender.com/courses');
     let response = await request.json();
     Mapper(response)
     return await response;
@@ -39,16 +39,24 @@ const API = async () => {
 
 API()
 
-const Localdata = JSON.parse(localStorage.getItem('course-data'))||[];
+const Localdata = JSON.parse(localStorage.getItem('course-data')) || [];
+let user = JSON.parse(localStorage.getItem("user")) || []
 
-const Mapper =  (data) => {
+
+const isExists = (id) => {
+    let temp = Localdata.filter((item) => item.id == id)
+    return temp.length > 0 ? true : false
+}
+
+
+const Mapper = (data) => {
 
     document.getElementById("course_List").innerHTML = ""
 
     data.map((ele, index) => {
         let image = document.createElement("img")
         image.src = ele.image
-        image.classList.add("img-fluid","image");
+        image.classList.add("img-fluid", "image");
 
         let title = document.createElement("h3")
         title.innerHTML = `Name : ${ele.name}`
@@ -70,11 +78,33 @@ const Mapper =  (data) => {
         btn2.innerHTML = "Book"
         btn2.classList.add("btn2");
         btn2.addEventListener("click", (e) => {
-            e.preventDefault();
-            Localdata.push(ele);
-            localStorage.setItem("course-data", JSON.stringify(Localdata));
-            alert("Your Course In Process ||")
-            window.location.href = "/Final/html/dashbord.html"
+
+            if (user == "User") {
+                if (isExists(ele.id)) {
+
+                    Localdata.map((item, i) => {
+                        if (item.id == ele.id) {
+                            Localdata[i].qty += 1
+                        }
+                    })
+                    alert("This Product Already Exists !!")
+                }
+                else {
+
+                    Localdata.push({ ...ele, qty: 1 })
+                    alert("This Product Added To The Cart !!")
+
+                }
+
+
+                e.preventDefault();
+                localStorage.setItem("course-data", JSON.stringify(Localdata));
+                window.location.href = "/Final/html/dashbord.html"
+            }
+            else {
+                alert("Dashbord Open Only User Sorry ||")
+                window.location.href = "/Final/"
+            }
         })
 
         let div = document.createElement("div")
@@ -106,7 +136,7 @@ function sortByPrice(foodItems) {
 
 function sortByPopularity(foodItems) {
     return [...foodItems].sort((a, b) => b.actual_price_usd - a.actual_price_usd);
-    
+
 }
 
 
@@ -120,7 +150,7 @@ document.getElementById('sortByNameBtn').addEventListener('click', async () => {
 document.getElementById('sortByPriceBtn').addEventListener('click', async () => {
     const foodItems = await fetchFoodItems();
     const sortedItems = sortByPrice(foodItems);
-    
+
     Mapper(sortedItems);
     console.log(sortedItems);
 });
@@ -157,14 +187,14 @@ function displayFoodItems(foodItems) {
     });
 }
 
-document.getElementById("searchValue").addEventListener('input', async(e)=>{
+document.getElementById("searchValue").addEventListener('input', async (e) => {
     e.preventDefault()
-        let input = document.getElementById("searchValue").value
-        console.log(input);
-        let response = await fetch('https://json-server-2-e6hf.onrender.com/courses');
-       
-        let data = await response.json();
-        console.log(data);
-        let filter = data.filter(elm=>elm.name.includes(input))
-        Mapper(filter)
+    let input = document.getElementById("searchValue").value
+    console.log(input);
+    let response = await fetch('https://json-server-2-e6hf.onrender.com/courses');
+
+    let data = await response.json();
+    console.log(data);
+    let filter = data.filter(elm => elm.name.includes(input))
+    Mapper(filter)
 })

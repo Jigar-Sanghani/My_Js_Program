@@ -10,7 +10,7 @@
     text-align: center;
 }
 
-button{
+#allw{
     height: 60px;
     width: 150px;
     margin: 02% !important;
@@ -58,6 +58,14 @@ button{
     border-radius: 10px;
     background-color: rgba(140, 156, 156, 0.733);
     transition: all 0.5s;
+}
+
+.td5{
+    margin:03%;
+}
+
+.td6{
+    margin: 03%;
 }
 
 .btn1{

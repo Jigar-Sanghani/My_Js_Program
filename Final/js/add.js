@@ -17,20 +17,40 @@ document.addEventListener("contextmenu", (e) => {
 })
 
 
-const handleData = (e) => {
-    e.preventDefault();
-    let user = {
-        name: getvalue("name"),
-        category : getvalue("category"),
-        image : getvalue("image"),
-        price : getvalue("price"),
-        description: getvalue("description")
+let cartList = JSON.parse(localStorage.getItem("course-data")) || []
+
+let user = JSON.parse(localStorage.getItem("user")) || []
+
+if (user == "Admin") {
+
+    const handleData = (e) => {
+        e.preventDefault();
+        let user = {
+            name: getvalue("name"),
+            category: getvalue("category"),
+            image: getvalue("image"),
+            price: getvalue("price"),
+            description: getvalue("description")
+        }
+
+        create(user)
+        alert("Add Course Successfully || ")
+        window.location.href = "/Final/"
+        console.log(cartList);
     }
-    
-    create(user)
-    alert("Add Course Successfully || ")
-    window.location.href = "/Final/"
+
+    // console.log("wrear");
+
 }
+else {
+
+    alert("New Course Create Only Admin Sorry ||")
+    window.location.href = "/Final/"
+
+    // console.log("ert");
+
+}
+
 
 
 document.getElementById("form").addEventListener("submit", handleData)
