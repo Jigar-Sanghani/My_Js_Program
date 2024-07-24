@@ -87,12 +87,12 @@ const Mapper = (data) => {
                             Localdata[i].qty += 1
                         }
                     })
-                    alert("This Product Already Exists !!")
+                    alert("This Course Already Exists !!")
                 }
                 else {
 
                     Localdata.push({ ...ele, qty: 1 })
-                    alert("This Product Added To The Cart !!")
+                    alert("This Course Added To The Cart !!")
 
                 }
 
@@ -103,8 +103,8 @@ const Mapper = (data) => {
             }
             else {
 
-                Localdata.push({ ...ele, qty: 1 })
-                alert("This Product Added To The Cart !!")
+                alert("Book Open Only User Sorry ||")
+                window.location.href = "/Final/"
             }
         })
 

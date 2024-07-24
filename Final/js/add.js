@@ -29,7 +29,7 @@ if (user == "Admin") {
             name: getvalue("name"),
             category: getvalue("category"),
             image: getvalue("image"),
-            price: getvalue("price"),
+            actual_price_usd: getvalue("price"),
             description: getvalue("description")
         }
 
@@ -40,6 +40,9 @@ if (user == "Admin") {
     }
 
     // console.log("wrear");
+
+
+    document.getElementById("form").addEventListener("submit", handleData)
 
 }
 else {
@@ -53,4 +56,3 @@ else {
 
 
 
-document.getElementById("form").addEventListener("submit", handleData)

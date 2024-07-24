@@ -51,67 +51,88 @@ const handleQty = (index, opr) => {
     localStorage.setItem("Book-Food", JSON.stringify(cartList))
 }
 
-const mapper =  (data) => {
-    document.getElementById("listpage").innerHTML = ""
-
-    let tr = document.createElement("div");
-
-    let td1 = document.createElement("td");
-    let img = document.createElement("img");
-    img.src = data.image;
-    td1.append(img)
-    img.classList.add("image")
+const mapper = (data) => {
+    document.getElementById("jlist").innerHTML = ""
 
 
-    let td2 = document.createElement("td");
-    td2.innerHTML = data.name
+    data.map((ele, i) => {
 
-    let td3 = document.createElement("td");
-    td3.innerHTML = data.caloriesPerServing
+        
+        let image = document.createElement("img")
+        image.src = ele.image
+        image.classList.add("img-fluid", "image");
 
-    let td4 = document.createElement("td");
-    td4.innerHTML = data.rating
+        let title = document.createElement("h3")
+        title.innerHTML = `Name : ${ele.name}`
+        title.classList.add("title")
 
-    let city = document.createElement("p");
-    city.innerHTML = data.city
-    let td5 = document.createElement("td");
+        let category = document.createElement("h4")
+        category.innerHTML = `City : ${ele.city}`
+        category.classList.add("category")
 
-    let btn1 = document.createElement("button");
-    btn1.innerHTML = "-"
-    let btn2 = document.createElement("button");
+        let price = document.createElement("h4")
+        price.innerHTML = `Price: ${ele.caloriesPerServing}`
+        price.classList.add("price")
 
-    btn2.innerHTML = data.qty
+        let description = document.createElement("h5")
+        description.innerHTML = `Rating : ${ele.rating}`
+        description.classList.add("description")
 
-    let btn3 = document.createElement("button");
-    btn3.innerHTML = "+"
-    btn1.addEventListener("click", () => handleQty(i, "-"))
-    btn3.addEventListener("click", () => handleQty(i, "+"))
-    td5.append(btn1, btn2, btn3)
+        let btn2 = document.createElement("button")
+        btn2.innerHTML = "Book"
+        btn2.classList.add("btn2");
+        btn2.addEventListener("click", () => {
+            alert("This Food Ordered ||")
+            window.location.href = "/Final-Exam/"
+        })
 
-    let td6 = document.createElement("td");
-    td6.innerHTML = data.price * data.qty
+        let td5 = document.createElement("td");
 
-    let td7 = document.createElement("td");
-    td7.innerHTML = "Delete";
-    td7.style.cursor = "pointer";
-    td7.addEventListener("click", () => handleDelete(i))
+        let b1 = document.createElement("button");
+        b1.innerHTML = "-"
+        let b2 = document.createElement("button");
 
-    tr.append(td1, td2, td3, td4, city, td5, city, td6, td7)
+        b2.innerHTML = ele.qty
 
-    document.getElementById("listpage").append(tr)
+        let b3 = document.createElement("button");
+        b3.innerHTML = "+"
+        b1.addEventListener("click", () => handleQty(i, "-"))
+        b3.addEventListener("click", () => handleQty(i, "+"))
+        td5.append(b1, b2, b3)
+        td5.classList.add("td5")
 
 
+        let btn1 = document.createElement("button")
+        btn1.innerHTML = "Delete"
+        btn1.classList.add("btn1");
+        btn1.addEventListener("click", () => {
+            handleDelete(i)
+        })
+
+
+        let td6 = document.createElement("h5");
+        td6.innerHTML = `Total Cost : ${ele.caloriesPerServing * ele.qty}`
+        td6.classList.add("td6")
+
+        let div = document.createElement("div")
+        div.classList.add("div");
+        div.append(image, title, category, price, description, btn2, btn1, td5, td6)
+
+        document.getElementById("jlist").append(div)
+
+    })
 }
 
 const handleDeleteall = () => {
-    document.getElementById("listpage").innerHTML = ""
+    document.getElementById("jlist").innerHTML = ""
     cartList = [];
     localStorage.setItem("Book-Food", JSON.stringify(cartList))
     alert("All Item Are Deleted !!")
     mapper(cartList)
+        window.location.href = "/Final-Exam/"
 }
 
 
 mapper(cartList)
 
-document.getElementById("all").addEventListener("click", handleDeleteall)
+document.getElementById("allw").addEventListener("click", handleDeleteall)

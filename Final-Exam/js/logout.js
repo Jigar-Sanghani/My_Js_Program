@@ -1,32 +1,32 @@
 import { DeleteUser } from "../components/api.js";
 import navbar from "../components/navbar.js";
+import getvalue from "../components/getvalue.js";
 
 
 
-let islogin = localStorage.getItem("islogin") || false;
-if (!islogin) {
-    window.location.href = "/Final-Exam/html/signup.html"
-}
-
-const API = async () => {
-    let request = await fetch(`https://json-server-3-bner.onrender.com/user-exam`);
-    let response = await request.json();
-    return response;
+let is_login = localStorage.getItem("is_login") || false;
+if (!is_login) {
+    window.location.href = "/Final/html/signup.html"
 }
 
 
+const handleData = (e) => {
+    e.preventDefault();
 
-let data = await API();
+    let user = {
+        email: getvalue("email"),
+        password: getvalue("password")
+    }
 
-const id = data.id ;
 
-const deleteUser = async () => {
-    DeleteUser(id)
+    console.log(user.email);
+
+    DeleteUser(user.email)
     alert("User Has Deleted ||");
-    localStorage.setItem("islogin", false) 
-    window.location.href = "/Final-Exam/"
+    localStorage.setItem("islogin", false)
+    window.location.href = "/Final/"
 }
 
-document.getElementById("button").addEventListener("click", deleteUser);
+document.getElementById("form").addEventListener("submit", handleData)
 
 document.getElementById("navbar").innerHTML = navbar()

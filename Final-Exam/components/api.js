@@ -1,8 +1,10 @@
 
 //  Delete User
-export const DeleteUser = async (id) => {
-    let req = await fetch(`https://json-server-3-bner.onrender.com/user-exam/${id}`, {
+export const DeleteUser = async (email) => {
+    let req = await fetch(`https://json-server-3-bner.onrender.com/user-exam/${email}`, {
         method: "DELETE",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(email)
     })
 }
 
@@ -11,7 +13,7 @@ const isExist = async (email) => {
     let req = await fetch(`https://json-server-3-bner.onrender.com/user-exam?email=${email}`);
     let res = await req.json()
 
-    if (res.length == 0) {
+    if (res.length > 0) {
         return true
     }
     else {
@@ -34,6 +36,13 @@ export const createUser = async (user) => {
 
     let isExists = await isExist(user.email);
     if (isExists) {
+
+        
+        alert("User Already Exists || ");
+        window.location.href = "/Final-Exam/html/login.html"
+    }
+    else {
+        
         await fetch("https://json-server-3-bner.onrender.com/user-exam", {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -50,10 +59,6 @@ export const createUser = async (user) => {
 
         alert("Sign-Up Successfully ||");
         window.location.href = "/Final-Exam/"
-    }
-    else {
-        alert("User Already Exists || ");
-        window.location.href = "/Final-Exam/html/login.html"
     }
 
 }
@@ -77,6 +82,7 @@ export const login = async (user) => {
     }
     else {
         if (res[0].password == user.password) {
+            localStorage.setItem("islogin", true) 
             alert("Logged In Successfully || ");
             window.location.href = "/Final-Exam/"
         }

@@ -21,8 +21,7 @@ const handleData = (e) => {
         password: getvalue("password")
     }
     
-    login(user);
-    localStorage.setItem("islogin", true)   
+    login(user);  
 
 }
 

@@ -19,7 +19,7 @@ const getLocation = () => {
         navigator.geolocation.getCurrentPosition((position) => {
             let lat = position.coords.latitude;
             let lon = position.coords.longitude;
-            API({lat, lon}, false);
+            API({ lat, lon }, false);
         });
     } else {
         alert("Geolocation is not supported by this browser.");
@@ -31,19 +31,23 @@ window.addEventListener("load", getLocation);
 const API = async () => {
     let request = await fetch('https://json-server-4-tqur.onrender.com/food');
     let response = await request.json();
+    Mapper(response)
     return response;
 }
 
-const API1 = async (search) => {
-    let request = await fetch(`https://json-server-4-tqur.onrender.com/food?name=${search}`);
-    let response = await request.json();
-    return response;
+API();
+
+const Localdata = JSON.parse(localStorage.getItem('Book-Food')) || [];
+
+
+const isExists = (id) => {
+    let temp = Localdata.filter((item) => item.id == id)
+    return temp.length > 0 ? true : false
 }
 
 
-const Mapper = async () => {
 
-    let data = await API();
+const Mapper =  (data) => {
 
     document.getElementById("foodlist").innerHTML = ""
     data.map((ele, index) => {
@@ -54,20 +58,37 @@ const Mapper = async () => {
         let btn2 = document.createElement("button")
         btn2.innerHTML = "Order"
         let cost = document.createElement("h4")
-        cost.innerHTML = `Cost : ${ele.caloriesPerServing}`
+        cost.innerHTML = `Price : ${ele.caloriesPerServing}`
 
         let h5 = document.createElement("h5")
-        h5.innerHTML =  `City : ${ele.city}`
+        h5.innerHTML = `City : ${ele.city}`
 
         let rating = document.createElement("h5")
         rating.innerHTML = `Rating : ${ele.rating}`
-        btn2.addEventListener("click", () => {
-            localStorage.setItem("Book-Food", JSON.stringify(ele));
-            alert("Food Order After A Payment ||")
+        btn2.addEventListener("click", (e) => {
+
+            if (isExists(ele.id)) {
+
+                Localdata.map((item, i) => {
+                    if (item.id == ele.id) {
+                        Localdata[i].qty += 1
+                    }
+                })
+                alert("This Food Already Exists !!")
+            }   
+            else {
+
+                Localdata.push({ ...ele, qty: 1 })
+                alert("This Food Added To The Cart !!")
+                console.log(ele.id);
+
+            }
+            e.preventDefault();
+            localStorage.setItem("Book-Food", JSON.stringify(Localdata));
             window.location.href = "/Final-Exam/html/cart.html"
-        })                                                                                                                  
+        })
         let div = document.createElement("div")
-        div.append( image,title,h5,rating,  btn2, cost)
+        div.append(image, title, h5, rating, btn2, cost)
 
         title.classList.add("title")
         image.classList.add("img-fluid");
@@ -77,54 +98,12 @@ const Mapper = async () => {
         h5.classList.add("city");
         cost.classList.add("cost");
 
-        
+
         document.getElementById("foodlist").append(div)
     })
-    
+
 }
 
-const mapper = async (data) => {
-
-
-    document.getElementById("foodlist").innerHTML = ""
-    data.map((ele, index) => {
-        let image = document.createElement("img")
-        image.src = ele.image
-        let title = document.createElement("h3")
-        title.innerHTML = ele.name
-        let btn2 = document.createElement("button")
-        btn2.innerHTML = "Order"
-        let cost = document.createElement("h4")
-        cost.innerHTML = `Cost : ${ele.caloriesPerServing}`
-
-        let h5 = document.createElement("h5")
-        h5.innerHTML =  `City : ${ele.city}`
-
-        let rating = document.createElement("h5")
-        rating.innerHTML = `Rating : ${ele.rating}`
-        btn2.addEventListener("click", () => {
-            localStorage.setItem("Book-Food", JSON.stringify(ele));
-            alert("Food Order After A Payment ||")
-            window.location.href = "/Final-Exam/html/cart.html"
-        })                                                                                                                  
-        let div = document.createElement("div")
-        div.append( image,title,h5,rating,  btn2, cost)
-
-        image.classList.add("img-fluid");
-        div.classList.add("div");
-        btn2.classList.add("btn2");
-        rating.classList.add("rating");
-        h5.classList.add("city");
-        cost.classList.add("cost");
-
-        
-        document.getElementById("foodlist").append(div)
-    })
-    
-}
-
-Mapper();
-// mapper();
 
 function sortByName(foodItems) {
     return [...foodItems].sort((a, b) => {
@@ -150,22 +129,22 @@ function sortByPopularity(foodItems) {
 document.getElementById('sortByNameBtn').addEventListener('click', async () => {
     const foodItems = await fetchFoodItems();
     const sortedItems = sortByName(foodItems);
-    mapper(sortedItems);
+    Mapper(sortedItems);
     console.log(sortedItems);
 });
 
 document.getElementById('sortByPriceBtn').addEventListener('click', async () => {
     const foodItems = await fetchFoodItems();
     const sortedItems = sortByPrice(foodItems);
-    
-    mapper(sortedItems);
+
+    Mapper(sortedItems);
     console.log(sortedItems);
 });
 
 document.getElementById('sortByPopularityBtn').addEventListener('click', async () => {
     const foodItems = await fetchFoodItems();
     const sortedItems = sortByPopularity(foodItems);
-    mapper(sortedItems);
+    Mapper(sortedItems);
 });
 
 const fetchFoodItems = async () => {
@@ -195,24 +174,14 @@ function displayFoodItems(foodItems) {
 }
 
 
-const Handle_Mapper = async (search) => {
-    try {
-        let data = await API1(search); // Assuming API function accepts a search parameter
-        mapper(data);
-    } catch (error) {
-        alert('Error fetching data:', error);
-    }
-}
+document.getElementById("searchValue").addEventListener('input', async (e) => {
+    e.preventDefault()
+    let input = document.getElementById("searchValue").value
+    console.log(input);
+    let response = await fetch('https://json-server-4-tqur.onrender.com/food');
 
-const Search_Handle = async (e) => {
-    if (e.key === "Enter") {
-        e.preventDefault(); // Prevent default form submission behavior
-
-        let Result_Search = document.getElementById("Video_Search").value;
-
-        await Handle_Mapper(Result_Search);
-        console.log(Result_Search);
-    }
-}
-
-document.getElementById("Video_Search").addEventListener("keydown", Search_Handle);
+    let data = await response.json();
+    console.log(data);
+    let filter = data.filter(elm => elm.name.includes(input))
+    Mapper(filter)
+})

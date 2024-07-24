@@ -24,10 +24,12 @@ const handleData = (e) => {
     let user = {
         name: getvalue("name"),
         image : getvalue("image"),
-        cost: getvalue("price"),
+        city: getvalue("city"),
+        caloriesPerServing: getvalue("price"),
         rating : getvalue("rating")
     }
     create(user)
+    console.log(user);
     alert("Add Food Successfully || ")
     window.location.href = "/Final-Exam/"
 }

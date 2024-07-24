@@ -4,7 +4,7 @@ export const DeleteUser = async (email) => {
     let req = await fetch(`https://json-server-1-4hf7.onrender.com/final-2user?email=${email}`, {
         method: "DELETE",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify(user)
+        body: JSON.stringify(email)
     })
 }
 
