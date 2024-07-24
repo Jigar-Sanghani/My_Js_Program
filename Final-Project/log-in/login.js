@@ -23,7 +23,6 @@ const handleData = (e) => {
 
     login(user);
     
-    localStorage.setItem("islogin", true)
 
 }
 

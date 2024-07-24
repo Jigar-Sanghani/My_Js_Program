@@ -1,7 +1,9 @@
 //  Delete User
-export const DeleteUser = async (id) => {
-    let req = await fetch(`https://json-server-2-e6hf.onrender.com/user_final/${id}`, {
+export const DeleteUser = async (email) => {
+    let req = await fetch(`https://json-server-2-e6hf.onrender.com/user_final/${email}`, {
         method: "DELETE",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(email)
     })
 }
 
@@ -10,7 +12,7 @@ const isExist = async (email) => {
     let req = await fetch(`https://json-server-2-e6hf.onrender.com/user_final?email=${email}`);
     let res = await req.json()
 
-    if (res.length == 0) {
+    if (res.length > 0) {
         return true
     }
     else {
@@ -19,11 +21,26 @@ const isExist = async (email) => {
 
 }
 
+export const create = async (user) => {
+
+    let req = await fetch("https://json-server-1-4hf7.onrender.com/courses", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(user)
+    })
+}
+
 // create a new user
 export const createUser = async (user) => {
 
     let isExists = await isExist(user.email);
     if (isExists) {
+        alert("User Already Exists || ");
+        window.location.href = "/Final-Project/log-in/login.html"
+    }
+    else {
+
+
         await fetch("https://json-server-2-e6hf.onrender.com/user_final", {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -40,10 +57,6 @@ export const createUser = async (user) => {
 
         alert("Sign-Up Successfully ||");
         window.location.href = "/Final-Project/"
-    }
-    else {
-        alert("User Already Exists || ");
-        window.location.href = "/Final-Project/log-in/login.html"
     }
 
 }
@@ -68,6 +81,7 @@ export const login = async (user) => {
     else {
         if (res[0].password == user.password) {
             alert("Logged In Successfully || ");
+            localStorage.setItem("islogin", true)
             window.location.href = "/Final-Project/"
         }
         else {
