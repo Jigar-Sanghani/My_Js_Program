@@ -43,7 +43,7 @@ const mapper =async() => {
         button.addEventListener("click", () => {
             localStorage.setItem("Book-Train", JSON.stringify(ele));
             alert("Ticket Book After A Payment ||")
-            window.location.href = "/Final-Project/train/new.html"
+            window.location.href = "./new.html"
         })
 
         let div = document.createElement("div");

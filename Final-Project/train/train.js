@@ -9,7 +9,7 @@ document.addEventListener("contextmenu", (e) => {
 let islogin = localStorage.getItem("islogin") || false;
 if (!islogin) {
     alert("Please Sign-Up First || ");
-    window.location.href = "/Final-Project/signup/signup.html"
+    window.location.href = "../signup/signup.html"
 }
 const trainData = (e) => {
     e.preventDefault();
@@ -24,7 +24,7 @@ const trainData = (e) => {
     localStorage.setItem("Train-Menu", JSON.stringify(user))
 
     alert("Your Train Tickets In Process || ")
-    window.location.href = "/Final-Project/train/train_book.html"
+    window.location.href = "./train_book.html"
 
 }
 

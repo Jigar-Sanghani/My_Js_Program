@@ -9,7 +9,7 @@ document.addEventListener("contextmenu", (e) => {
 let islogin = localStorage.getItem("islogin") || false;
 if (!islogin) {
     alert("Please Sign-Up First || ");
-    window.location.href = "/Final-Project/signup/signup.html"
+    window.location.href = "../signup/signup.html"
 }
 const hotelData = (e) => {
     e.preventDefault();
@@ -23,7 +23,7 @@ const hotelData = (e) => {
 
     localStorage.setItem("Hotel-Menu", JSON.stringify(user))
     alert("Your Hotel Tickets In Process || ")
-    window.location.href ="/Final-Project/hotels/hotel_book.html"
+    window.location.href ="./hotel_book.html"
 
 }
 

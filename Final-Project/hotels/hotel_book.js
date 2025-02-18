@@ -34,7 +34,7 @@ const Mapper = async () => {
         btn2.addEventListener("click", () => {
             localStorage.setItem("Book-Hotel", JSON.stringify(ele));
             alert("Rooms Book After A Payment ||")
-            window.location.href = "/Final-Project/hotels/new.html"
+            window.location.href = "./new.html"
         })
         btn_parent.append(btn1, btn2)
         let cost = document.createElement("h4")

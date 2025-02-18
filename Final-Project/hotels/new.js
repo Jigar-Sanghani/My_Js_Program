@@ -22,7 +22,7 @@ document.getElementById("seat").innerHTML = `Description : ${hotellist.descripti
 
 document.getElementById("submit").addEventListener("click", () =>{
     alert("Your Booking Successfull ||")
-    window.location.href = "/Final-Project/"
+    window.location.href = "../index.html"
 })
 
 document.addEventListener("contextmenu", (e) => {

@@ -23,7 +23,7 @@ document.getElementById("total").innerHTML = `Total Price : ${Train_Menu.seat * 
 
 document.getElementById("submit").addEventListener("click", () =>{
     alert("Your Booking Successfull ||")
-    window.location.href = "/Final-Project/"
+    window.location.href = "../index.html"
 })
 
 document.addEventListener("contextmenu", (e) => {

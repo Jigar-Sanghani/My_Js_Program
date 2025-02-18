@@ -9,7 +9,7 @@ document.addEventListener("contextmenu", (e) => {
 let islogin = localStorage.getItem("islogin") || false;
 if (!islogin) {
     alert("Please Sign-Up First || ");
-    window.location.href = "/Final-Project/signup/signup.html"
+    window.location.href = "../signup/signup.html"
 }
 
 const flightData = (e) => {
@@ -25,7 +25,7 @@ const flightData = (e) => {
     localStorage.setItem("Flight-Menu", JSON.stringify(user))
 
     alert("Your Flight Tickets In Process || ")
-    window.location.href ="/Final-Project/flights/flight_book.html"
+    window.location.href ="./flight_book.html"
 
 }
 
